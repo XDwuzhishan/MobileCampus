@@ -37,6 +37,19 @@ public interface UserMapper {
     })
     User getUserById(Long id);
 
+    @Select("select * from mc_user where username=#{username}")
+    @Results({
+            @Result(property = "id",column = "id"),
+            @Result(property = "username",column = "username"),
+            @Result(property = "password",column = "password"),
+            @Result(property = "created",column = "created"),
+            @Result(property = "updated",column = "updated"),
+            @Result(property = "sex",column = "sex"),
+            @Result(property = "age",column = "age"),
+            @Result(property = "school",column = "school")
+    })
+    User getUserByName(String username);
+
     @Insert("insert into mc_user (username,password,created,updated,sex,age,school) " +
             "values (#{username},#{password},#{created},#{updated},#{sex},#{age},#{school})")
     void insert(User user);
