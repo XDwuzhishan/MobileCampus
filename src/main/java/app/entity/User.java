@@ -11,6 +11,16 @@ public class User {
     private Long id;
     private String username;
     private String password;
+    private String picUrl;
+
+    public String getPicUrl() {
+        return picUrl;
+    }
+
+    public void setPicUrl(String picUrl) {
+        this.picUrl = picUrl;
+    }
+
     private boolean sex;
     private int age;
     private String school;

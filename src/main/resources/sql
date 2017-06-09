@@ -7,6 +7,7 @@ CREATE TABLE `NewTable` (
 `sex`  tinyint(255) NULL ,
 `age`  int NULL ,
 `school`  varchar(30) NULL ,
+`picUrl`  VARCHAR (255) NULL ,
 PRIMARY KEY (`id`)
 )
 ;
