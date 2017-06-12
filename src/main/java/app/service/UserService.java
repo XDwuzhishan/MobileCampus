@@ -24,7 +24,7 @@ public class UserService {
             return new CommonResult(500,"该用户不存在",null);
         }else {
             if (user.getPassword().equals(password)){
-                return new CommonResult(200,"登陆成功",null);
+                return new CommonResult(200,"登陆成功",user);
             }else {
                 return new CommonResult(500,"密码错误",null);
             }
@@ -44,6 +44,7 @@ public class UserService {
 
     @Transactional
     public CommonResult regist(String username, String password,String picUrl) {
+
 
         User newUser=new User();
         newUser.setUsername(username);

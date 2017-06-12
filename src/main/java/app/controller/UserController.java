@@ -18,14 +18,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
     public CommonResult login(@RequestParam(required = true) String username,@RequestParam(required = true) String password){
         System.out.println("loginController");
         System.out.println("loginController");
         return userService.login(username,password);
     }
 
-    @RequestMapping(value = "/check",method = RequestMethod.GET)
+    @RequestMapping(value = "/check",method = RequestMethod.POST)
     public CommonResult check(@RequestParam(required = true) String username){
         System.out.println("checkController");
         System.out.println("checkController");
@@ -37,6 +37,8 @@ public class UserController {
     public CommonResult regist(@RequestParam(required = true) String username,@RequestParam(required = true) String password,@RequestParam(required = false) String picUrl){
         System.out.println("registerController");
         System.out.println("registerController");
+        System.out.println("password: "+password);
+        System.out.println("password: "+password);
         return userService.regist(username,password,picUrl);
     }
 

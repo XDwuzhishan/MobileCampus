@@ -1,7 +1,7 @@
 CREATE TABLE `NewTable` (
 `id`  bigint NOT NULL AUTO_INCREMENT ,
 `username`  varchar(30) NOT NULL ,
-`password`  varchar(16) NOT NULL ,
+`password`  varchar(255) NOT NULL ,
 `created`  datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP ,
 `updated`  datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP ,
 `sex`  tinyint(255) NULL ,

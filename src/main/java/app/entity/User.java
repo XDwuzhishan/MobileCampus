@@ -12,6 +12,20 @@ public class User {
     private String username;
     private String password;
     private String picUrl;
+    private boolean sex;
+    private int age;
+    private String school;
+    private Date created;
+    private Date updated;
+    private String nick;
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
+    }
 
     public String getPicUrl() {
         return picUrl;
@@ -20,12 +34,6 @@ public class User {
     public void setPicUrl(String picUrl) {
         this.picUrl = picUrl;
     }
-
-    private boolean sex;
-    private int age;
-    private String school;
-    private Date created;
-    private Date updated;
 
     public Long getId() {
         return id;

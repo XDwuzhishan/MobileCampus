@@ -1,5 +1,7 @@
 package app.Model;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.List;
 
 /**
@@ -9,9 +11,9 @@ public class CommonResult {
 
     private int status;
     private String message;
-    private List data;
+    private Object data;
 
-    public CommonResult(int status, String message, List data) {
+    public CommonResult(int status, String message, Object data) {
         this.status = status;
         this.message = message;
         this.data = data;
@@ -33,11 +35,11 @@ public class CommonResult {
         this.message = message;
     }
 
-    public List getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(List data) {
+    public void setData(Object data) {
         this.data = data;
     }
 }
