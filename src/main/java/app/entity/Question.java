@@ -12,7 +12,7 @@ public class Question {
     private Date created;
     private Date updated;
     private String title;
-    private String desc;
+    private String mydesc;
     private Long ownerId;
     private int acknum;
     private String ownername;
@@ -57,12 +57,12 @@ public class Question {
         this.title = title;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getMydesc() {
+        return mydesc;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setMydesc(String mydesc) {
+        this.mydesc = mydesc;
     }
 
     public Long getOwnerId() {

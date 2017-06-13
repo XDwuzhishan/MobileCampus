@@ -16,7 +16,7 @@ public interface QuestionMapper {
             @Result(property = "created",column = "created"),
             @Result(property = "updated",column = "updated"),
             @Result(property = "title",column = "title"),
-            @Result(property = "desc",column = "desc"),
+            @Result(property = "mydesc",column = "mydesc"),
             @Result(property = "ownerId",column = "ownerId"),
             @Result(property = "ownername",column = "ownername"),
             @Result(property = "acknum",column = "acknum")
@@ -29,7 +29,7 @@ public interface QuestionMapper {
             @Result(property = "created",column = "created"),
             @Result(property = "updated",column = "updated"),
             @Result(property = "title",column = "title"),
-            @Result(property = "desc",column = "desc"),
+            @Result(property = "mydesc",column = "mydesc"),
             @Result(property = "ownerId",column = "ownerId"),
             @Result(property = "ownername",column = "ownername"),
             @Result(property = "acknum",column = "acknum")
@@ -40,8 +40,7 @@ public interface QuestionMapper {
     @Update("update mc_question set updated=#{updated},acknum=#{acknum} where id=#{id}")
     void update(Question question);
 
-    @Insert("insert into mc_question (created,updated,title,desc,ownerId,acknum,ownername) values (#{created},#{updated},#{title}," +
-            "#{desc},#{ownerId},#{acknum},#{ownername})")
+    @Insert("insert into mc_question (title,mydesc,ownerId,acknum,ownername,created,updated) values (#{title},#{mydesc},#{ownerId},#{acknum},#{ownername},#{created},#{updated})")
     void insert(Question question);
 
     @Delete("delete from mc_question where id=#{id}")

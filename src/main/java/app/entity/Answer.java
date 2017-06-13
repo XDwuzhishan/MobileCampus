@@ -14,6 +14,15 @@ public class Answer {
     private String ownername;
     private int star;
     private Date updated;
+    private long quesId;
+
+    public long getQuesId() {
+        return quesId;
+    }
+
+    public void setQuesId(long quesId) {
+        this.quesId = quesId;
+    }
 
     public Date getUpdated() {
         return updated;

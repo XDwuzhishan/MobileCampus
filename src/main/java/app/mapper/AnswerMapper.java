@@ -18,7 +18,8 @@ public interface AnswerMapper {
             @Result(property = "ownerId",column = "ownerId"),
             @Result(property = "ownername",column = "ownername"),
             @Result(property = "star",column = "star"),
-            @Result(property = "updated",column = "updated")
+            @Result(property = "updated",column = "updated"),
+            @Result(property = "quesId",column = "quesId")
     })
     List<Answer> getAll();
 
@@ -30,13 +31,27 @@ public interface AnswerMapper {
             @Result(property = "ownerId",column = "ownerId"),
             @Result(property = "ownername",column = "ownername"),
             @Result(property = "star",column = "star"),
-            @Result(property = "updated",column = "updated")
+            @Result(property = "updated",column = "updated"),
+            @Result(property = "quesId",column = "quesId")
     })
     Answer getById(Long id);
 
+    @Select("select * from mc_answer where quesId=#{quesId}")
+    @Results({
+            @Result(property = "id",column = "id"),
+            @Result(property = "content",column = "content"),
+            @Result(property = "created",column = "created"),
+            @Result(property = "ownerId",column = "ownerId"),
+            @Result(property = "ownername",column = "ownername"),
+            @Result(property = "star",column = "star"),
+            @Result(property = "updated",column = "updated"),
+            @Result(property = "quesId",column = "quesId")
+    })
+    List<Answer> getByQuesId(long quesId);
 
-    @Insert("insert into mc_answer (id,content,created,ownerId,ownername,star,updated) values (#{id},#{content},#{created},#{ownerId}," +
-            "#{ownername},#{star},#{updated})")
+
+    @Insert("insert into mc_answer (id,content,created,ownerId,ownername,star,updated,quesId) values (#{id},#{content},#{created},#{ownerId}," +
+            "#{ownername},#{star},#{updated},#{quesId})")
     void insert(Answer answer);
 
     @Update("update mc_answer set star=#{star},updated=#{updated} where id=#{id}")
