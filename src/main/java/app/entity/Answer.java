@@ -15,6 +15,15 @@ public class Answer {
     private int star;
     private Date updated;
     private long quesId;
+    private int comNum;
+
+    public int getComNum() {
+        return comNum;
+    }
+
+    public void setComNum(int comNum) {
+        this.comNum = comNum;
+    }
 
     public long getQuesId() {
         return quesId;

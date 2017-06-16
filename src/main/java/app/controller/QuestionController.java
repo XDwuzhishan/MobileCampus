@@ -32,5 +32,10 @@ public class QuestionController {
         return questionService.getQuestionListByPage(page,rows);
     }
 
+    @RequestMapping(value = "/showMyQues")
+    public CommonResult showMyQuestions(long ownerId){
+        return questionService.getMyQuestions(ownerId);
+    }
+
 
 }

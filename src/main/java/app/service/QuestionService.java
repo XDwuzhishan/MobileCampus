@@ -29,7 +29,7 @@ public class QuestionService {
     private UserMapper userMapper;
 
     @Autowired
-    private AnswerMapper answerMapper;
+    private AnswerService answerService;
 
 
     @Transactional
@@ -56,10 +56,10 @@ public class QuestionService {
 
     @Transactional
     public CommonResult deleteQuestion(long id){
-        List<Answer> answers=answerMapper.getByQuesId(id);
+        List<Answer> answers=answerService.getAnswerByQuestionId(id);
         if (answers!=null&&answers.size()>0){
             for (Answer answer:answers){
-                answerMapper.delete(answer.getId());
+                answerService.deleteAnswer(answer.getId());
             }
         }
         questionMapper.delete(id);
@@ -82,4 +82,10 @@ public class QuestionService {
     }
 
 
+    public CommonResult getMyQuestions(long ownerId) {
+
+        List<Question> questions=questionMapper.getByOwnerId(ownerId);
+        return new CommonResult(200,"ok",questions);
+
+    }
 }

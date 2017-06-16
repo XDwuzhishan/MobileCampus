@@ -19,7 +19,8 @@ public interface AnswerMapper {
             @Result(property = "ownername",column = "ownername"),
             @Result(property = "star",column = "star"),
             @Result(property = "updated",column = "updated"),
-            @Result(property = "quesId",column = "quesId")
+            @Result(property = "quesId",column = "quesId"),
+            @Result(property = "comNum",column = "comNum")
     })
     List<Answer> getAll();
 
@@ -32,7 +33,8 @@ public interface AnswerMapper {
             @Result(property = "ownername",column = "ownername"),
             @Result(property = "star",column = "star"),
             @Result(property = "updated",column = "updated"),
-            @Result(property = "quesId",column = "quesId")
+            @Result(property = "quesId",column = "quesId"),
+            @Result(property = "comNum",column = "comNum")
     })
     Answer getById(Long id);
 
@@ -45,16 +47,17 @@ public interface AnswerMapper {
             @Result(property = "ownername",column = "ownername"),
             @Result(property = "star",column = "star"),
             @Result(property = "updated",column = "updated"),
-            @Result(property = "quesId",column = "quesId")
+            @Result(property = "quesId",column = "quesId"),
+            @Result(property = "comNum",column = "comNum")
     })
     List<Answer> getByQuesId(long quesId);
 
 
-    @Insert("insert into mc_answer (id,content,created,ownerId,ownername,star,updated,quesId) values (#{id},#{content},#{created},#{ownerId}," +
-            "#{ownername},#{star},#{updated},#{quesId})")
+    @Insert("insert into mc_answer (id,content,created,ownerId,ownername,star,updated,quesId,comNum) values (#{id},#{content},#{created},#{ownerId}," +
+            "#{ownername},#{star},#{updated},#{quesId},#{comNum})")
     void insert(Answer answer);
 
-    @Update("update mc_answer set star=#{star},updated=#{updated} where id=#{id}")
+    @Update("update mc_answer set comNum=#{comNum},star=#{star},updated=#{updated} where id=#{id}")
     void update(Answer answer);
 
     @Delete("delete from mc_answer where id=#{id}")

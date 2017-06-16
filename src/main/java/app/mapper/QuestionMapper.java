@@ -46,4 +46,7 @@ public interface QuestionMapper {
     @Delete("delete from mc_question where id=#{id}")
     void delete(long id);
 
+    @Select("select * from mc_question where ownerId=#{ownerId}")
+    List<Question> getByOwnerId(long ownerId);
+
 }
