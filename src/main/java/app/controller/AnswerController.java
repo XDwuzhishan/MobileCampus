@@ -27,4 +27,10 @@ public class AnswerController {
         return answerService.deleteAnswer(id);
     }
 
+    @RequestMapping(value = "/showByPage")
+    public CommonResult showAnswersByPage(Long quesId,int page,int rows){
+        return answerService.getAnswerListByPage(quesId,page,rows);
+    }
+
+
 }

@@ -7,12 +7,15 @@ import app.entity.User;
 import app.mapper.AnswerMapper;
 import app.mapper.QuestionMapper;
 import app.mapper.UserMapper;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ansi.AnsiElement;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by xdcao on 2017/6/12.
@@ -58,6 +61,15 @@ public class AnswerService {
         question.setUpdated(new Date());
         questionMapper.update(question);
         return new CommonResult(200,"删除答案成功",null);
+    }
+
+
+    public CommonResult getAnswerListByPage(long quesId,int page,int rows){
+        PageHelper.startPage(page,rows);
+        List<Answer> answers=answerMapper.getByQuesId(quesId);
+        PageInfo<Answer> pageInfo=new PageInfo<Answer>(answers);
+        CommonResult commonResult=new CommonResult(200,"ok",answers);
+        return commonResult;
     }
 
 }

@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * Created by xdcao on 2017/6/5.
  */
 @SpringBootApplication
-@EnableTransactionManagement
 @MapperScan("app.mapper")
 public class BootApplication {
 

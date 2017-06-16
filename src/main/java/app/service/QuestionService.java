@@ -7,6 +7,8 @@ import app.entity.User;
 import app.mapper.AnswerMapper;
 import app.mapper.QuestionMapper;
 import app.mapper.UserMapper;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -68,5 +70,16 @@ public class QuestionService {
     public void updateQuestion(Question question){
         questionMapper.update(question);
     }
+
+
+
+    public CommonResult getQuestionListByPage(int page,int rows){
+        PageHelper.startPage(page,rows);
+        List<Question> questions=questionMapper.getAll();
+        PageInfo<Question> pageInfo=new PageInfo<Question>(questions);
+        CommonResult commonResult=new CommonResult(200,"ok",questions);
+        return commonResult;
+    }
+
 
 }

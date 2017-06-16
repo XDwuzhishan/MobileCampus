@@ -27,5 +27,10 @@ public class QuestionController {
         return questionService.deleteQuestion(id);
     }
 
+    @RequestMapping(value = "/showByPage")
+    public CommonResult showQuestionsByPage(int page,int rows){
+        return questionService.getQuestionListByPage(page,rows);
+    }
+
 
 }
