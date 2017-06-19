@@ -6,6 +6,7 @@ import app.entity.Comment;
 import app.entity.User;
 import app.mapper.AnswerMapper;
 import app.mapper.CommentMapper;
+import app.mapper.ReplyMapper;
 import app.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,7 +31,7 @@ public class CommentService {
     private AnswerMapper answerMapper;
 
     @Autowired
-    private ReplyService replyService;
+    private ReplyMapper replyMapper;
 
     @Transactional
     public CommonResult addNewComment(Long answerId, String content, Long ownerId) {
@@ -53,9 +54,15 @@ public class CommentService {
     }
 
 
+    @Transactional
     public CommonResult deleteComment(Long id) {
+        Comment comment=commentMapper.getComById(id);
+        Answer answer=answerMapper.getById(comment.getAnswer_id());
+        answer.setComNum(answer.getComNum()-1);
+        answer.setUpdated(new Date());
+        answerMapper.update(answer);
         commentMapper.delete(id);
-        // TODO: 2017/6/16  把对应的回复也都删掉
+        replyMapper.deleteByComId(id);
         return new CommonResult(200,"ok",null);
     }
 
