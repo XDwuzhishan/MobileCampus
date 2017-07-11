@@ -43,7 +43,11 @@ public class AnswerService {
         Answer answer=new Answer();
         answer.setContent(content);
         answer.setOwnerId(userId);
-        answer.setOwnername(user.getNick());
+        if(user.getNick()==null){
+            answer.setOwnername(user.getUsername());
+        }else {
+            answer.setOwnername(user.getNick());
+        }
         answer.setStar(0);
         answer.setQuesId(quesId);
         answer.setComNum(0);

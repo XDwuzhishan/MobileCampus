@@ -38,7 +38,11 @@ public class ReplyService {
         reply.setComId(comId);
         reply.setContent(content);
         reply.setOwnerId(ownerId);
-        reply.setOwnerName(user.getNick());
+        if(user.getNick()==null){
+            reply.setOwnerName(user.getUsername());
+        }else {
+            reply.setOwnerName(user.getNick());
+        }
         reply.setTo(to);
         Date date=new Date();
         reply.setCreated(date);

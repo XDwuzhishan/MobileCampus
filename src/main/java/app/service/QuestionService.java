@@ -45,7 +45,11 @@ public class QuestionService {
         Date date=new Date();
         question.setCreated(date);
         question.setUpdated(date);
-        question.setOwnername(curUser.getNick());
+        if(curUser.getNick()==null){
+            question.setOwnername(curUser.getUsername());
+        }else {
+            question.setOwnername(curUser.getNick());
+        }
 
         questionMapper.insert(question);
 

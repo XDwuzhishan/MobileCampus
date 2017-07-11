@@ -43,7 +43,11 @@ public class CommentService {
         comment.setUpdated(date);
         comment.setOwnerId(ownerId);
         User user=userMapper.getUserById(ownerId);
-        comment.setOwnerName(user.getNick());
+        if(user.getNick()==null){
+            comment.setOwnerName(user.getUsername());
+        }else {
+            comment.setOwnerName(user.getNick());
+        }
         comment.setRepNum(0);
         commentMapper.insert(comment);
         Answer answer=answerMapper.getById(answerId);
