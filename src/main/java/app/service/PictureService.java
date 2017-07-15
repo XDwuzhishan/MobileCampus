@@ -3,11 +3,16 @@ package app.service;
 import app.Model.PictureResult;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by xdcao on 2017/6/9.
@@ -15,8 +20,11 @@ import java.net.UnknownHostException;
 @Service
 public class PictureService {
 
-    private static String filepath="D:/mobileTmp";
-    private static String baseUrl="http://";
+//    private static String filepath="D://upload";
+//    private static String baseUrl="http://localhost/";
+
+    private static String filepath="/data/wwwroot/default";
+    private static String baseUrl="http://101.200.59.58/";
 
     public PictureResult uploadPicture(MultipartFile pic) {
 
@@ -49,12 +57,57 @@ public class PictureService {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        String ip=addr.getHostAddress().toString();//获得本机IP
+//        String ip=addr.getHostAddress().toString();//获得本机IP
 
-        pictureResult.setUrl(baseUrl+ip+"/"+picName);
+        pictureResult.setUrl(baseUrl+picName);
         return pictureResult;
 
 
     }
 
+    public PictureResult batchPicture(HttpServletRequest request) {
+
+        List<MultipartFile> files=((MultipartHttpServletRequest)request).getFiles("uploadFile");
+        MultipartFile file= null;
+        BufferedOutputStream stream=null;
+        List<String> urls=new ArrayList<String>();
+        for (int i=0;i<files.size();i++){
+            file=files.get(i);
+            if (!file.isEmpty()){
+                try {
+                    byte[] bytes=file.getBytes();
+                    String picName=System.currentTimeMillis()+file.getOriginalFilename();
+                    File pic=new File(filepath,picName);
+                    stream = new BufferedOutputStream(new FileOutputStream(pic));
+                    stream.write(bytes);
+                    stream.close();
+                    urls.add(baseUrl+picName);
+                }catch (Exception e){
+                    stream=null;
+                    PictureResult pictureResult=new PictureResult();
+                    pictureResult.setError(1);
+                    pictureResult.setMessage("upload file failed"+i+"=>"+e.getMessage());
+                    return pictureResult;
+                }
+            }else {
+                PictureResult pictureResult=new PictureResult();
+                pictureResult.setError(1);
+                pictureResult.setMessage("The file was empty");
+            }
+        }
+
+        if (urls.size()==files.size()){
+            PictureResult pictureResult=new PictureResult();
+            pictureResult.setError(0);
+            pictureResult.setMessage("Success");
+            pictureResult.setUrls(urls);
+            return pictureResult;
+        }else {
+            PictureResult pictureResult=new PictureResult();
+            pictureResult.setError(1);
+            pictureResult.setMessage("Some file was failed");
+            return pictureResult;
+        }
+
+    }
 }

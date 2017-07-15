@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Created by xdcao on 2017/6/9.
  */
@@ -23,7 +25,11 @@ public class PictureController {
     public PictureResult uploadPic(@RequestParam MultipartFile uploadFile){
         System.out.println("PicController");
         return pictureService.uploadPicture(uploadFile);
+    }
 
+    @RequestMapping(value = "/pic/batch",method = RequestMethod.POST)
+    public PictureResult batchPic(HttpServletRequest request){
+        return pictureService.batchPicture(request);
     }
 
 }
