@@ -6,16 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27828795-caac-4659-bc1f-4d0e86a029bf" name="Default" comment="配置日志">
+    <list default="true" id="27828795-caac-4659-bc1f-4d0e86a029bf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/mobile_campus.iml" afterPath="$PROJECT_DIR$/../mobile_campus/mobile_campus.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/pom.xml" afterPath="$PROJECT_DIR$/../mobile_campus/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/controller/UserController.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/AnswerService.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/AnswerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/config/MyBatisConfig.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mybatis/MyBatisConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/config/WebSocketConfig.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/websocket/WebSocketConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/func/MyWebSocket.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/websocket/MyWebSocket.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../mobile_campus/out/" />
     <ignored path="$PROJECT_DIR$/../mobile_campus/target/" />
@@ -116,8 +108,8 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="304">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1195,7 +1187,7 @@
       <workItem from="1499711968466" duration="9529000" />
       <workItem from="1499742645389" duration="5871000" />
       <workItem from="1500105691294" duration="7363000" />
-      <workItem from="1500453296775" duration="10426000" />
+      <workItem from="1500453296775" duration="10469000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1496666596664</created>
@@ -1281,7 +1273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500474540723</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="配置日志">
+      <created>1500479692478</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1500479692478</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1317,7 +1316,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87625000" />
+    <option name="totallyTimeSpent" value="87668000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1330,7 +1329,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1386,7 +1384,8 @@
     <MESSAGE value="改个小bug" />
     <MESSAGE value="添加多文件上传接口，通过测试" />
     <MESSAGE value="测试websocket小例子" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试websocket小例子" />
+    <MESSAGE value="配置日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置日志" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1826,8 +1825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="304">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
