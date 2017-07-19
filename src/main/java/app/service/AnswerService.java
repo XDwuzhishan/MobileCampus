@@ -11,6 +11,8 @@ import app.mapper.QuestionMapper;
 import app.mapper.UserMapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ansi.AnsiElement;
 import org.springframework.stereotype.Service;
@@ -24,6 +26,8 @@ import java.util.List;
  */
 @Service
 public class AnswerService {
+
+    private Logger logger= LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private AnswerMapper answerMapper;
@@ -59,11 +63,11 @@ public class AnswerService {
         question.setAcknum(question.getAcknum()+1);
         question.setUpdated(date);
         questionMapper.update(question);
+        logger.info("添加回答成功");
         return new CommonResult(200,"添加回答成功",null);
     }
 
 
-    // TODO: 2017/6/16 新增comment实体后级联删除所有相关评论
     @Transactional
     public CommonResult deleteAnswer(long id){
         Answer answer=answerMapper.getById(id);
@@ -78,6 +82,7 @@ public class AnswerService {
                 commentService.deleteComment(comment.getId());
             }
         }
+        logger.info("删除答案成功");
         return new CommonResult(200,"删除答案成功",null);
     }
 
