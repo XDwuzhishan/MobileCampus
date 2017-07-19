@@ -11,8 +11,13 @@ import org.springframework.web.servlet.ModelAndView;
 public class TestPageController {
 
     @RequestMapping(value = "/uploadPage")
-    public ModelAndView index(){
+    public ModelAndView upload(){
         return new ModelAndView("upload");
+    }
+
+    @RequestMapping(value = "/websocketPage")
+    public ModelAndView websocket(){
+        return new ModelAndView("websocket");
     }
 
 
