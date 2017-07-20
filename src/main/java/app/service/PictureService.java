@@ -1,6 +1,7 @@
 package app.service;
 
 import app.Model.PictureResult;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -13,12 +14,15 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Created by xdcao on 2017/6/9.
  */
 @Service
 public class PictureService {
+
+    private org.slf4j.Logger logger= LoggerFactory.getLogger(this.getClass());
 
 //    private static String filepath="D://upload";
 //    private static String baseUrl="http://localhost/";
@@ -56,6 +60,7 @@ public class PictureService {
             addr = InetAddress.getLocalHost();
         } catch (UnknownHostException e) {
             e.printStackTrace();
+            logger.error(e.getMessage());
         }
 //        String ip=addr.getHostAddress().toString();//获得本机IP
 
@@ -83,6 +88,7 @@ public class PictureService {
                     stream.close();
                     urls.add(baseUrl+picName);
                 }catch (Exception e){
+                    logger.error(e.getMessage());
                     stream=null;
                     PictureResult pictureResult=new PictureResult();
                     pictureResult.setError(1);
