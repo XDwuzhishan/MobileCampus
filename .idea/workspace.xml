@@ -7,28 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27828795-caac-4659-bc1f-4d0e86a029bf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/ApplicationJob.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/AutowiringSpringBeanJobFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/QuartzConfiguration.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../mobile_campus/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_7_RELEASE.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/libraries/Maven__com_alibaba_fastjson_1_2_28.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/libraries/Maven__org_htmlparser_htmllexer_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/libraries/Maven__org_htmlparser_htmlparser_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/libraries/Maven__org_jsoup_jsoup_1_8_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_24.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/libraries/Maven__us_codecraft_webmagic_core_0_7_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/libraries/Maven__us_codecraft_webmagic_extension_0_7_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/libraries/Maven__us_codecraft_xsoup_0_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/Spider/DynamicNewPageProcessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/Spider/NoticeInformationPageProcessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/CourseTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/DynamicNews.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/NoticeInformation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/CourseTableMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/LoginJiaoWuchuService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/mobile_campus.iml" afterPath="$PROJECT_DIR$/../mobile_campus/mobile_campus.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/pom.xml" afterPath="$PROJECT_DIR$/../mobile_campus/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_permission_mapper.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_permission_mapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_role_mapper.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_role_mapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_user_mapper.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_user_mapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_user_role_mapper.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_user_role_mapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/QuartzConfiguration.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/QuartzConfiguration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/test/shiroTest/Hello.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/test/shiroTest/Hello.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mybatis/MyBatisConfig.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Mybatis/MyBatisConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/ShiroConfig.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/ShiroConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/ShiroUtil.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/ShiroUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_controller/ShiroController.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_controller/ShiroController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_permission.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_permission.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_role.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_role.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_user.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_user.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_user_role.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_user_role.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_service/ShiroService.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_service/ShiroService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/ApplicationJob.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/SpiderJob.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../mobile_campus/out/" />
     <ignored path="$PROJECT_DIR$/../mobile_campus/target/" />
@@ -51,69 +51,57 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mobile_campus/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="192" column="17" lean-forward="false" selection-start-line="192" selection-start-column="17" selection-end-line="192" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="QuartzConfiguration.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/QuartzConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+            <state relative-caret-position="704">
+              <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1600#1601#0" expanded="true" />
-                <element signature="e#1660#1661#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties">
+      <file leaf-file-name="CourseTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/CourseTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+            <state relative-caret-position="304">
+              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+              <folding>
+                <element signature="e#321#322#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpiderJob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/SpiderJob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="23" column="79" lean-forward="false" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginJiaoWuchuService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/LoginJiaoWuchuService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="73" column="31" lean-forward="true" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/ApplicationJob.java">
+      <file leaf-file-name="CourseTableMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/CourseTableMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BootApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/BootApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="e#487#488#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AutowiringSpringBeanJobFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/AutowiringSpringBeanJobFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="494">
+              <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,9 +115,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="Interface" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -144,17 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/QuestionMapper.java" />
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/controller/CommentController.java" />
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/Reply.java" />
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/ReplyMapper.java" />
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/CommentMapper.java" />
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/controller/ReplyController.java" />
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/resources/sql" />
-        <option value="$PROJECT_DIR$/../mobile_campus/.idea/artifacts/mobile_campus_war.xml" />
-        <option value="$PROJECT_DIR$/../mobile_campus/.idea/artifacts/mobile_campus_war_exploded.xml" />
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/CommentService.java" />
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/QuestionService.java" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/ReplyService.java" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/controller/PictureController.java" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Model/PictureResult.java" />
@@ -190,10 +167,21 @@
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/resources/static/s.html" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/HtmlController/HtmlController.java" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/../mobile_campus/pom.xml" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/AutowiringSpringBeanJobFactory.java" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/ApplicationJob.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/Spider/NoticeInformationPageProcessor.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/pom.xml" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/DynamicNews.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/NoticeInformation.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/Spider/DynamicNewPageProcessor.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/Spider/LoginJiaoWuchu.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/Spider/LoginJiaoWuchuService.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/CourseTable.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/CourseTableMapper.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/LoginJiaoWuchuService.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/SpiderJob.java" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/QuartzConfiguration.java" />
       </list>
     </option>
@@ -321,7 +309,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -566,7 +553,221 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Quartz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quartz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mybatis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -574,12 +775,13 @@
       </pane>
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../mobile_campus/src/main/resources/META-INF" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -588,18 +790,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="app.Quartz" />
-      <recent name="app.service" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="app.config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\mobile_campus\src\main\java\app\Quartz\Spider" />
       <recent name="H:\mobile_campus\src\main\resources\static\js" />
       <recent name="H:\mobile_campus\src\main\resources\static\css" />
       <recent name="H:\mobile_campus\src\main\resources\static\jquery-easyui-1.4.1" />
       <recent name="H:\mobile_campus\src\main\resources\static" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app.config" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="app.Quartz" />
+      <recent name="app.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -625,32 +828,6 @@
       <option name="SPRING_BOOT_MAIN_CLASS" value="app.BootApplication" />
       <module name="mobile_campus" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Hello.helloShiro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="shiroTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="mobile_campus" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="shiroTest" />
-      <option name="MAIN_CLASS_NAME" value="shiroTest.Hello" />
-      <option name="METHOD_NAME" value="helloShiro" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="false" name="Hello.roleShiro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -729,6 +906,26 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DynamicNewPageProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="app.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="app.Quartz.Spider.DynamicNewPageProcessor" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mobile_campus" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="mobile_campus" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1142,18 +1339,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.BootApplication" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.Hello.helloShiro" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.Hello.roleShiro" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.Hello.permissionShiro" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ShiroMapperTest.test1" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.Hello.roleShiro" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.Hello.permissionShiro" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ShiroMapperTest.test1" />
+      <item index="4" class="java.lang.String" itemvalue="Application.DynamicNewPageProcessor" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Spring Boot.BootApplication" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ShiroMapperTest.test1" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Hello.permissionShiro" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.Hello.roleShiro" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.Hello.helloShiro" />
+        <item index="1" class="java.lang.String" itemvalue="Application.DynamicNewPageProcessor" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ShiroMapperTest.test1" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Hello.permissionShiro" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.Hello.roleShiro" />
       </list>
     </recent_temporary>
   </component>
@@ -1188,7 +1385,9 @@
       <workItem from="1500516570161" duration="11025000" />
       <workItem from="1500904462965" duration="3677000" />
       <workItem from="1500956042393" duration="1347000" />
-      <workItem from="1500970326345" duration="2246000" />
+      <workItem from="1500970326345" duration="3232000" />
+      <workItem from="1500983515594" duration="4720000" />
+      <workItem from="1500989600010" duration="4999000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1496666596664</created>
@@ -1316,7 +1515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500907508414</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="测试quartz简单任务调度，下一步把定时爬虫加进来">
+      <created>1500972621029</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1500972621029</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1352,7 +1558,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109179000" />
+    <option name="totallyTimeSpent" value="119884000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1386,13 +1592,12 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66255605" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8116592" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847533" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19315404" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19804402" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1400,6 +1605,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1426,11 +1632,12 @@
     <MESSAGE value="测试shiro web1" />
     <MESSAGE value="测试shiro web2" />
     <MESSAGE value="想要自己写前端，算了太麻烦" />
-    <option name="LAST_COMMIT_MESSAGE" value="想要自己写前端，算了太麻烦" />
+    <MESSAGE value="测试quartz简单任务调度，下一步把定时爬虫加进来" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试quartz简单任务调度，下一步把定时爬虫加进来" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1439,77 +1646,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/logback.xml" />
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/mobile_campus.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/1.5.2.RELEASE/spring-boot-starter-logging-1.5.2.RELEASE.jar!/META-INF/maven/org.springframework.boot/spring-boot-starter-logging/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/1.5.2.RELEASE/spring-boot-starter-logging-1.5.2.RELEASE.jar!/META-INF/maven/org.springframework.boot/spring-boot-starter-logging/pom.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/AnswerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/CommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/PictureService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="90" column="47" lean-forward="false" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/QuestionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/ReplyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.4/shiro-core-1.2.4.jar!/org/apache/shiro/config/Ini.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2014">
@@ -1556,16 +1692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="62" column="39" lean-forward="true" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/Answer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1594,13 +1720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/AnswerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-151">
-          <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -1694,39 +1813,35 @@
     <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/css/styles.css" />
     <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/js/http_code.jquery.com_jquery-3.1.1.js" />
     <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/templates/login.html" />
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="192" column="17" lean-forward="false" selection-start-line="192" selection-start-column="17" selection-end-line="192" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/BootApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="e#487#488#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        <state relative-caret-position="177">
+          <caret line="207" column="16" lean-forward="false" selection-start-line="207" selection-start-column="16" selection-end-line="207" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/ApplicationJob.java">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/DynamicNews.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="133">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/NoticeInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1734,6 +1849,109 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/log4j.properties" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/log.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="109" lean-forward="true" selection-start-line="6" selection-start-column="109" selection-end-line="6" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/Spider/DynamicNewPageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/4.1.6.RELEASE/spring-context-support-4.1.6.RELEASE.jar!/org/springframework/scheduling/quartz/SchedulerAccessor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="70" column="16" lean-forward="false" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/Spider/NoticeInformationPageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/Answer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="e#395#396#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/CommentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/CourseTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="e#321#322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/AnswerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/CourseTableMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/LoginJiaoWuchuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="73" column="31" lean-forward="true" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/SpiderJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="79" lean-forward="false" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1742,12 +1960,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/QuartzConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        <state relative-caret-position="704">
+          <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1600#1601#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
           </folding>
         </state>
       </provider>
