@@ -1,4 +1,4 @@
-package app.shiro.t_entity;
+package app.Shiro.t_entity;
 
 /**
  * Created by xdcao on 2017/7/20.

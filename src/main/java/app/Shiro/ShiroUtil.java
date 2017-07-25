@@ -1,4 +1,4 @@
-package app.shiro;
+package app.Shiro;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;

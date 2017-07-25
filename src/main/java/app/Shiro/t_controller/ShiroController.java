@@ -1,7 +1,7 @@
-package app.shiro.t_controller;
+package app.Shiro.t_controller;
 
-import app.shiro.t_entity.t_user;
-import app.shiro.t_service.ShiroService;
+import app.Shiro.t_entity.t_user;
+import app.Shiro.t_service.ShiroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

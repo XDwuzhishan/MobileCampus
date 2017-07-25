@@ -1,4 +1,4 @@
-package app.mybatis;
+package app.Mybatis;
 
 import com.github.pagehelper.PageHelper;
 import org.apache.ibatis.plugin.Interceptor;

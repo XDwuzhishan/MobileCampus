@@ -1,14 +1,13 @@
 package shiroTest;
 
 
-import app.shiro.ShiroUtil;
+import app.Shiro.ShiroUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.config.IniSecurityManagerFactory;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.subject.Subject;
-import org.apache.shiro.util.Factory;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -20,7 +19,7 @@ public class Hello {
 
     @Test
     public void helloShiro(){
-        IniSecurityManagerFactory factory = new IniSecurityManagerFactory("classpath:shiro.ini");
+        IniSecurityManagerFactory factory = new IniSecurityManagerFactory("classpath:Shiro.ini");
         SecurityManager securityManager=factory.getInstance();
         SecurityUtils.setSecurityManager(securityManager);
         Subject currentUser=SecurityUtils.getSubject();
@@ -37,7 +36,7 @@ public class Hello {
 
     @Test
     public void roleShiro(){
-        Subject currentUser= ShiroUtil.login("classpath:shiro.ini","caohao","123");
+        Subject currentUser= ShiroUtil.login("classpath:Shiro.ini","caohao","123");
         System.out.println(currentUser.hasRole("role1")?"有role1这个角色":"没有role1");
         boolean results[]=currentUser.hasRoles(Arrays.asList("role1","role2","role3"));
         System.out.println(results[0] ? "有role1这个角色" : "没有role1这个角色");
@@ -49,7 +48,7 @@ public class Hello {
 
     @Test
     public void permissionShiro(){
-        Subject currentUser=ShiroUtil.login("classpath:shiro.ini","caohao","123");
+        Subject currentUser=ShiroUtil.login("classpath:Shiro.ini","caohao","123");
         System.out.println(currentUser.isPermitted("user:select") ? "有user:select这个权限"
                 : "没有user:select这个权限");
 

@@ -1,7 +1,6 @@
 package app.mapper;
 
-import app.shiro.t_entity.t_permission;
-import org.apache.catalina.LifecycleState;
+import app.Shiro.t_entity.t_permission;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;

@@ -7,7 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27828795-caac-4659-bc1f-4d0e86a029bf" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/ApplicationJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/AutowiringSpringBeanJobFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/QuartzConfiguration.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../mobile_campus/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_7_RELEASE.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../mobile_campus/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/mobile_campus.iml" afterPath="$PROJECT_DIR$/../mobile_campus/mobile_campus.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/pom.xml" afterPath="$PROJECT_DIR$/../mobile_campus/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_permission_mapper.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_permission_mapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_role_mapper.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_role_mapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_user_mapper.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_user_mapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_user_role_mapper.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/t_user_role_mapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/test/shiroTest/Hello.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/test/shiroTest/Hello.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mybatis/MyBatisConfig.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Mybatis/MyBatisConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/ShiroConfig.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/ShiroConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/ShiroUtil.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/ShiroUtil.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_controller/ShiroController.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_controller/ShiroController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_permission.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_permission.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_role.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_role.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_user.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_user.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_user_role.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_user_role.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_service/ShiroService.java" afterPath="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_service/ShiroService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../mobile_campus/out/" />
     <ignored path="$PROJECT_DIR$/../mobile_campus/target/" />
@@ -30,55 +51,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ShiroMapperTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/test/shiroTest/ShiroMapperTest.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mobile_campus/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="439">
+              <caret line="192" column="17" lean-forward="false" selection-start-line="192" selection-start-column="17" selection-end-line="192" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShiroService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_service/ShiroService.java">
+      <file leaf-file-name="QuartzConfiguration.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/QuartzConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShiroController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_controller/ShiroController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShiroConfig.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/ShiroConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="211">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShiroUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/ShiroUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#1600#1601#0" expanded="true" />
+                <element signature="e#1660#1661#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,9 +78,21 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="57">
+              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationJob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/ApplicationJob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,10 +100,22 @@
       <file leaf-file-name="BootApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/BootApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="228">
               <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#487#488#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AutowiringSpringBeanJobFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/AutowiringSpringBeanJobFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,9 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/AnswerMapper.java" />
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/Comment.java" />
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/controller/QuestionController.java" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/mapper/QuestionMapper.java" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/entity/Reply.java" />
@@ -158,9 +170,7 @@
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/resources/logback.xml" />
         <option value="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/1.5.2.RELEASE/spring-boot-starter-logging-1.5.2.RELEASE.jar!/META-INF/maven/org.springframework.boot/spring-boot-starter-logging/pom.properties" />
         <option value="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/1.5.2.RELEASE/spring-boot-starter-logging-1.5.2.RELEASE.jar!/META-INF/maven/org.springframework.boot/spring-boot-starter-logging/pom.xml" />
-        <option value="$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/service/PictureService.java" />
-        <option value="$PROJECT_DIR$/../mobile_campus/pom.xml" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/ShiroUtil.java" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/resources/shiro.ini" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/test/shiroTest/Hello.java" />
@@ -180,6 +190,11 @@
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/resources/static/s.html" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/HtmlController/HtmlController.java" />
         <option value="$PROJECT_DIR$/../mobile_campus/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/../mobile_campus/pom.xml" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/AutowiringSpringBeanJobFactory.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/ApplicationJob.java" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/QuartzConfiguration.java" />
       </list>
     </option>
   </component>
@@ -307,7 +322,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -526,8 +540,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile_campus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quartz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -543,17 +588,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="app.Quartz" />
+      <recent name="app.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\mobile_campus\src\main\resources\static\js" />
       <recent name="H:\mobile_campus\src\main\resources\static\css" />
       <recent name="H:\mobile_campus\src\main\resources\static\jquery-easyui-1.4.1" />
       <recent name="H:\mobile_campus\src\main\resources\static" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="app.config" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="app.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1140,7 +1186,9 @@
       <workItem from="1500514982362" duration="1329000" />
       <workItem from="1500516382453" duration="150000" />
       <workItem from="1500516570161" duration="11025000" />
-      <workItem from="1500904462965" duration="3004000" />
+      <workItem from="1500904462965" duration="3677000" />
+      <workItem from="1500956042393" duration="1347000" />
+      <workItem from="1500970326345" duration="2246000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1496666596664</created>
@@ -1261,7 +1309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500564474471</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="想要自己写前端，算了太麻烦">
+      <created>1500907508414</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1500907508414</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1297,7 +1352,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104913000" />
+    <option name="totallyTimeSpent" value="109179000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1309,7 +1364,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="32" width="1696" height="1026" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1330,12 +1386,13 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2163677" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66255605" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847533" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18826406" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19315404" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1343,7 +1400,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1369,7 +1425,8 @@
     <MESSAGE value="测试shiro基础功能" />
     <MESSAGE value="测试shiro web1" />
     <MESSAGE value="测试shiro web2" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试shiro web2" />
+    <MESSAGE value="想要自己写前端，算了太麻烦" />
+    <option name="LAST_COMMIT_MESSAGE" value="想要自己写前端，算了太麻烦" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1382,27 +1439,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/templates/websocket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.11/tomcat-embed-websocket-8.5.11.jar!/javax/websocket/Session.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185">
-          <caret line="52" column="27" lean-forward="true" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/websocket/MyWebSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-75">
@@ -1471,17 +1507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3363">
-          <caret line="177" column="16" lean-forward="false" selection-start-line="177" selection-start-column="16" selection-end-line="177" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1544,28 +1569,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_user.java">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_user.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_role.java">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_role.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_permission.java">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_permission.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_entity/t_user_role.java">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_entity/t_user_role.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
@@ -1590,7 +1615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1598,7 +1622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1606,7 +1629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="69" lean-forward="false" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1630,117 +1652,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_service/ShiroService.java">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_service/ShiroService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
           <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/t_controller/ShiroController.java">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/t_controller/ShiroController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/ShiroUtil.java">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/ShiroUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Shiro/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/shiro/ShiroConfig.java">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/jquery-easyui-1.4.1/jquery-1.6.4.js" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/jquery-easyui-1.4.1/src/easyloader.js" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/s.html" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/js/jquery-1.6.4.js" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/js/jquery.form.js" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/css/bootstrap.css" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/js/bootstrap.js" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/HtmlController/HtmlController.java" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/css/styles.css" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/js/http_code.jquery.com_jquery-3.1.1.js" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/templates/login.html" />
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/jquery-easyui-1.4.1/jquery-1.6.4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/jquery-easyui-1.4.1/src/easyloader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/s.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/js/jquery-1.6.4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/js/jquery.form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/HtmlController/HtmlController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state relative-caret-position="439">
+          <caret line="192" column="17" lean-forward="false" selection-start-line="192" selection-start-column="17" selection-end-line="192" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/BootApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="228">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#487#488#0" expanded="true" />
@@ -1748,27 +1712,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="57">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/static/js/http_code.jquery.com_jquery-3.1.1.js">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/ApplicationJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="323">
+          <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/resources/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/AutowiringSpringBeanJobFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3432">
-          <caret line="314" column="9" lean-forward="false" selection-start-line="314" selection-start-column="9" selection-end-line="314" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="418">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mobile_campus/src/main/java/app/Quartz/QuartzConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1600#1601#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,10 +1,10 @@
-package app.shiro.t_service;
+package app.Shiro.t_service;
 
 import app.mapper.t_permission_mapper;
 import app.mapper.t_role_mapper;
 import app.mapper.t_user_mapper;
 import app.mapper.t_user_role_mapper;
-import app.shiro.t_entity.t_user;
+import app.Shiro.t_entity.t_user;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
