@@ -1,5 +1,6 @@
 package app.service;
 
+import app.Model.CommonResult;
 import app.entity.CourseTable;
 import app.mapper.CourseTableMapper;
 import org.apache.http.*;
@@ -40,6 +41,27 @@ public class LoginJiaoWuchuService {
 
     private static CloseableHttpClient httpClient= HttpClients.createDefault();
 
+    public CommonResult getCourseTable(String username, String password) {
+
+        CourseTable courseTable = courseTableMapper.getCourseByUsername(username);
+        if (courseTable!=null){
+            CommonResult commonResult=new CommonResult(200,"success",courseTable);
+            return commonResult;
+        }else {
+            try {
+                String cookie = login(username, password);
+                CourseTable courseTable1 = crawAndSaveCourse(cookie, username, password);
+                return new CommonResult(200,"success",courseTable1);
+            }catch (Exception e){
+                return new CommonResult(500,"failure",null);
+            }
+
+        }
+
+    }
+
+
+
     // TODO: 2017/7/25 通知信息的持久化
     public void crawAndSaveInfo(String cookie) throws IOException {
 
@@ -63,7 +85,7 @@ public class LoginJiaoWuchuService {
     }
 
     @Transactional
-    public void crawAndSaveCourse(String cookie,String username,String password) throws IOException {
+    public CourseTable crawAndSaveCourse(String cookie, String username, String password) throws IOException {
 
         HttpGet course=new HttpGet("http://yjsxt.xidian.edu.cn/eduadmin/findCaresultByStudentAction.do");
         course.setHeader("Cookie",cookie);
@@ -83,11 +105,13 @@ public class LoginJiaoWuchuService {
             courseTable.setUpdated(date);
             courseTableMapper.insert(courseTable);
             logger.info("新建用户： "+username+"的课程表");
+            return courseTable;
         }else {
             old.setCourse(courseHtml.xpath("//div[@id='list']/table").all().toString());
             old.setUpdated(new Date());
             courseTableMapper.update(old);
             logger.info("更新用户： "+username+"的课程表");
+            return old;
         }
 
 
