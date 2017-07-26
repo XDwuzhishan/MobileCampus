@@ -7,6 +7,8 @@ import java.util.Date;
  */
 public class DynamicNews {
 
+    private int id;
+
     private String title;
 
     private String link;
@@ -15,6 +17,13 @@ public class DynamicNews {
 
     private Date date;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Date getDate() {
         return date;
