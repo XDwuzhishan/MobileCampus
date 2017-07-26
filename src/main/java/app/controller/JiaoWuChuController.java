@@ -23,6 +23,11 @@ public class JiaoWuChuController {
         return jiaoWuchuService.getCourseTable(username,password);
     }
 
+    @RequestMapping(value = "/loginInfos",method = RequestMethod.POST)
+    public CommonResult getAllLoginInfos(){
+        return jiaoWuchuService.getAllLoginInfos();
+    }
+
 
 
 }

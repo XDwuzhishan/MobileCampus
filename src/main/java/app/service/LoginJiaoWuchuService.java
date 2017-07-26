@@ -2,7 +2,9 @@ package app.service;
 
 import app.Model.CommonResult;
 import app.entity.CourseTable;
+import app.entity.LoginInfo;
 import app.mapper.CourseTableMapper;
+import app.mapper.LoginInfoMapper;
 import org.apache.http.*;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -33,6 +35,9 @@ public class LoginJiaoWuchuService {
     @Autowired
     private CourseTableMapper courseTableMapper;
 
+    @Autowired
+    private LoginInfoMapper loginInfoMapper;
+
     private static Logger logger= LoggerFactory.getLogger(LoginJiaoWuchuService.class);
 
     private static final String authUrl="http://ids.xidian.edu.cn/authserver/login?service=http%3A%2F%2Fjwxt.xidian.edu.cn%2Fcaslogin.jsp";
@@ -40,6 +45,17 @@ public class LoginJiaoWuchuService {
     private static final String loginUrl="http://jwxt.xidian.edu.cn/caslogin.jsp";
 
     private static CloseableHttpClient httpClient= HttpClients.createDefault();
+
+    public CommonResult getAllLoginInfos(){
+        List<LoginInfo> loginInfos = loginInfoMapper.getAll();
+        if (loginInfos!=null&&loginInfos.size()>0){
+            return new CommonResult(200,"success",loginInfos);
+        }else {
+            return new CommonResult(500,"failure",null);
+        }
+
+    }
+
 
     public CommonResult getCourseTable(String username, String password) {
 
@@ -62,24 +78,45 @@ public class LoginJiaoWuchuService {
 
 
 
-    // TODO: 2017/7/25 通知信息的持久化
+
+    @Transactional
     public void crawAndSaveInfo(String cookie) throws IOException {
+
+        loginInfoMapper.deleteAll();
+        logger.info("清除旧信息");
 
         HttpGet info=new HttpGet("http://yjsxt.xidian.edu.cn/info/findAllBroadcastMessageAction.do?flag=findAll");
         info.setHeader("Cookie",cookie);
         CloseableHttpResponse infoResp = httpClient.execute(info);
         Html infoHtml=new Html(EntityUtils.toString(infoResp.getEntity()),"http://yjsxt.xidian.edu.cn/info/findAllBroadcastMessageAction.do?flag=findAll");
-        String table=infoHtml.xpath("//div[@id='list']/form/table").get();
-        logger.info(table);
+        List<String> tableRows=infoHtml.xpath("//div[@id='list']/form/table/tbody/tr").all();
+        for (String tableRow:tableRows){
+            LoginInfo loginInfo=new LoginInfo();
+            loginInfo.setNoticer(tableRow.substring(tableRow.indexOf("发布人"),tableRow.indexOf("发布人")+8));
+            loginInfo.setDate(tableRow.substring(tableRow.indexOf("<li> 20")+5,tableRow.indexOf("<li> 20")+25));
+            loginInfo.setSubTitle(tableRow.substring(tableRow.indexOf("subtitle")+10,tableRow.lastIndexOf("</span>")));
+            loginInfo.setContent(tableRow.substring(tableRow.indexOf("<hr></li> <li>")+14,tableRow.lastIndexOf("</li> <li>")));
+            loginInfoMapper.insert(loginInfo);
+            logger.info("新增一条通知信息loginInfo");
+        }
+
         List<String> links = infoHtml.xpath("//div[@id='list']/form/span[@class='pagelinks']/a[@title]").links().regex("http://yjsxt\\.xidian\\.edu\\.cn/info/findAllBroadcastMessageAction\\.do.*").all();
-        logger.info(links.toString());
+        System.out.println(links);
         for (String link:links){
             HttpGet info1=new HttpGet(link);
             info1.setHeader("Cookie",cookie);
             CloseableHttpResponse infoResp1 = httpClient.execute(info1);
             Html infoHtml1=new Html(EntityUtils.toString(infoResp1.getEntity()),"http://yjsxt.xidian.edu.cn/info/findAllBroadcastMessageAction.do?flag=findAll");
-            String table1=infoHtml1.xpath("//div[@id='list']/form/table").get();
-            logger.info(table1);
+            List<String> tableRows1=infoHtml1.xpath("//div[@id='list']/form/table/tbody/tr").all();
+            for (String tableRow:tableRows1){
+                LoginInfo loginInfo=new LoginInfo();
+                loginInfo.setNoticer(tableRow.substring(tableRow.indexOf("发布人"),tableRow.indexOf("发布人")+8));
+                loginInfo.setDate(tableRow.substring(tableRow.indexOf("<li> 20")+5,tableRow.indexOf("<li> 20")+25));
+                loginInfo.setSubTitle(tableRow.substring(tableRow.indexOf("subtitle")+10,tableRow.lastIndexOf("</span>")));
+                loginInfo.setContent(tableRow.substring(tableRow.indexOf("<hr></li> <li>")+14,tableRow.lastIndexOf("</li> <li>")));
+                loginInfoMapper.insert(loginInfo);
+                logger.info("新增一条通知信息loginInfo");
+            }
         }
 
     }

@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.io.IOException;
 
 /**
- * Created by xdcao on 2017/7/25.
+ * Created by xdcao on 2017/7/26.
  */
-public class SpiderJob implements Job {
+public class SpiderJobLoginInfo implements Job{
 
     @Autowired
     private LoginJiaoWuchuService loginJiaoWuchuService;
@@ -21,15 +21,11 @@ public class SpiderJob implements Job {
 
         try {
             String cookie = loginJiaoWuchuService.login("1601120078", "208037");
-            loginJiaoWuchuService.crawAndSaveCourse(cookie,"1601120078","208037");
-//            loginJiaoWuchuService.crawAndSaveInfo(cookie);
+            loginJiaoWuchuService.crawAndSaveInfo(cookie);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
     }
-
-
 
 }
