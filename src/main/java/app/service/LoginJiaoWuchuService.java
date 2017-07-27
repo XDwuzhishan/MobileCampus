@@ -244,27 +244,35 @@ public class LoginJiaoWuchuService {
 
         Header[] setCookies = httpResponse.getHeaders("Set-Cookie");
 
-        System.out.println(setCookies[0].getValue());
-        System.out.println(setCookies[1].getValue());
 
-        //ROUTE
-        String route=setCookies[0].getValue();
+
+        if (setCookies!=null&&setCookies.length>0){
+
+            //ROUTE
+            String route=setCookies[0].getValue();
 //        System.out.println("route cookie: "+route);
 
-
-        // JSESSIONID
-        String JSESSIONID = setCookies[1].getValue();
+            if (setCookies.length==1){
+                return route+";";
+            }
+            // JSESSIONID
+            String JSESSIONID = setCookies[1].getValue();
 //        System.out.println("JSESSIONID cookie:" + JSESSIONID);
 
-        if (setCookies.length==2){
-            return route+";"+JSESSIONID;
-        }else {
-            //BIGipServeridsnew.xidian.edu.cn
-            String big=setCookies[2].getValue();
+            if (setCookies.length==2){
+                return route+";"+JSESSIONID;
+            }else {
+                //BIGipServeridsnew.xidian.edu.cn
+                String big=setCookies[2].getValue();
 //        System.out.println("BIGipServeridsnew.xidian.edu.cn cookie: "+big);
 
-            return route+";"+JSESSIONID+" "+big;
+                return route+";"+JSESSIONID+" "+big;
+            }
+        }else {
+            return null;
         }
+
+
     }
 
 }

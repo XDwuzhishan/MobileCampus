@@ -3,6 +3,7 @@ package app.controller;
 import app.Model.CommonResult;
 import app.service.DynamicNewsService;
 import app.service.LoginJiaoWuchuService;
+import app.service.NoticeInfomationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,6 +23,10 @@ public class JiaoWuChuController {
     @Autowired
     private DynamicNewsService dynamicNewsService;
 
+    @Autowired
+    private NoticeInfomationService noticeInfomationService;
+
+
     @RequestMapping(value = "/course",method = RequestMethod.POST)
     public CommonResult getCourseTable(@RequestParam String username,@RequestParam String password){
         return jiaoWuchuService.getCourseTable(username,password);
@@ -37,6 +42,11 @@ public class JiaoWuChuController {
         return dynamicNewsService.getAllDynamicNewsOrderByDate();
     }
 
+
+    @RequestMapping(value = "/noticeInfo",method = RequestMethod.POST)
+    public CommonResult getAllNoticeInfos(){
+        return noticeInfomationService.getAllInfosOrderByDate();
+    }
 
 
 }
