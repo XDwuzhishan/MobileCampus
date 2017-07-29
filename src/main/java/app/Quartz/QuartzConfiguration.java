@@ -45,7 +45,7 @@ public class QuartzConfiguration {
         CronTriggerFactoryBean factoryBean=new CronTriggerFactoryBean();
         factoryBean.setJobDetail(jobDetail);
         factoryBean.setStartDelay(0L);
-        factoryBean.setCronExpression("0 0 4 * * ?");
+        factoryBean.setCronExpression("0 0 10 * * ?");
         return factoryBean;
     }
 
@@ -64,7 +64,7 @@ public class QuartzConfiguration {
         CronTriggerFactoryBean factoryBean=new CronTriggerFactoryBean();
         factoryBean.setJobDetail(jobDetail);
         factoryBean.setStartDelay(0L);
-        factoryBean.setCronExpression("0 0 4 * * ?");
+        factoryBean.setCronExpression("0 01 10 * * ?");
         return factoryBean;
     }
 
@@ -83,7 +83,7 @@ public class QuartzConfiguration {
         CronTriggerFactoryBean factoryBean=new CronTriggerFactoryBean();
         factoryBean.setJobDetail(jobDetail);
         factoryBean.setStartDelay(0L);
-        factoryBean.setCronExpression("0 0 4 * * ?");
+        factoryBean.setCronExpression("0 02 10 * * ?");
         return factoryBean;
     }
 
@@ -102,7 +102,7 @@ public class QuartzConfiguration {
         CronTriggerFactoryBean factoryBean=new CronTriggerFactoryBean();
         factoryBean.setJobDetail(jobDetail);
         factoryBean.setStartDelay(0L);
-        factoryBean.setCronExpression("0 14 16 * * ?");
+        factoryBean.setCronExpression("0 03 10 * * ?");
         return factoryBean;
     }
 

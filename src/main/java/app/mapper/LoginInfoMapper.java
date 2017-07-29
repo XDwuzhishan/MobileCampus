@@ -10,13 +10,13 @@ import java.util.List;
  */
 public interface LoginInfoMapper {
 
-    @Insert("insert into LoginInfo (noticer,noticeTime,subTitle,content) values (#{noticer},#{date},#{subTitle},#{content})")
+    @Insert("insert into logininfo (noticer,noticeTime,subTitle,content) values (#{noticer},#{date},#{subTitle},#{content})")
     void insert(LoginInfo loginInfo);
 
-    @Delete("delete from LoginInfo")
+    @Delete("delete from logininfo")
     void deleteAll();
 
-    @Select("select * from LoginInfo")
+    @Select("select * from logininfo")
     @Results({
             @Result(property = "noticer",column = "noticer"),
             @Result(property = "date",column = "noticeTime"),

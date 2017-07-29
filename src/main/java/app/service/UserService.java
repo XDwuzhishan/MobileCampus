@@ -18,6 +18,8 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
+
+
     public CommonResult login(String username,String password){
         User user=userMapper.getUserByName(username);
         if (user==null){
