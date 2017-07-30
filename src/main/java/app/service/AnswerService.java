@@ -37,10 +37,13 @@ public class AnswerService {
     private QuestionMapper questionMapper;
 
     @Autowired
-    private CommentService commentService;
+    private CommentMapper commentMapper;
 
     @Autowired
     private StarMapper starMapper;
+
+    @Autowired
+    private CommentService commentService;
 
     @Transactional
     public CommonResult addNewAnswer(Long userId,Long quesId,String content,String images){
@@ -79,7 +82,7 @@ public class AnswerService {
         question.setAcknum(question.getAcknum()-1);
         question.setUpdated(new Date());
         questionMapper.update(question);
-        List<Comment> comments=commentService.getCommentsByAnswerId(id);
+        List<Comment> comments=commentMapper.getCommentsByAnswerId(id);
         if (comments!=null&&comments.size()>0){
             for (Comment comment:comments){
                 commentService.deleteComment(comment.getId());
