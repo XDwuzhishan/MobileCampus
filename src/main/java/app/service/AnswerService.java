@@ -27,6 +27,9 @@ import java.util.List;
 @Service
 public class AnswerService {
 
+    // TODO: 2017/7/30 answer的star与用户的关联
+
+
     private Logger logger= LoggerFactory.getLogger(this.getClass());
 
     @Autowired
@@ -97,13 +100,38 @@ public class AnswerService {
     }
 
 
-    public void updateAnswer(Answer answer){
-        answerMapper.update(answer);
-    }
 
     public List<Answer> getAnswerByQuestionId(long id) {
 
         return answerMapper.getByQuesId(id);
 
     }
+
+    @Transactional
+    public CommonResult star(Long answerId) {
+
+        Answer answer=answerMapper.getById(answerId);
+        answer.setStar(answer.getStar()+1);
+        answer.setUpdated(new Date());
+        answerMapper.update(answer);
+        return new CommonResult(200,"success",null);
+
+    }
+
+    @Transactional
+    public CommonResult unStar(Long answerId) {
+        Answer answer=answerMapper.getById(answerId);
+        int starNum=answer.getStar();
+        if (starNum>0){
+            answer.setStar(answer.getStar()-1);
+            answer.setUpdated(new Date());
+            answerMapper.update(answer);
+            return new CommonResult(200,"success",null);
+        }else {
+            return new CommonResult(500,"star is zero",null);
+        }
+    }
+
+
+
 }

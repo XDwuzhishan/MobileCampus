@@ -32,5 +32,15 @@ public class AnswerController {
         return answerService.getAnswerListByPage(quesId,page,rows);
     }
 
+    @RequestMapping(value = "/star")
+    public CommonResult star(Long answerId){
+        return answerService.star(answerId);
+    }
+
+    @RequestMapping(value = "/unstar")
+    public CommonResult unstart(Long answerId){
+        return answerService.unStar(answerId);
+    }
+
 
 }
