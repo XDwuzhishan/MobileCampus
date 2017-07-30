@@ -22,6 +22,8 @@ import java.util.List;
 @Service
 public class QuestionService {
 
+    // TODO: 2017/7/30 更改返回的数据接口，给用户头像
+
     @Autowired
     private QuestionMapper questionMapper;
 
@@ -29,7 +31,7 @@ public class QuestionService {
     private UserMapper userMapper;
 
     @Autowired
-    private AnswerService answerService;
+    private AnswerMapper answerMapper;
 
 
     @Transactional
@@ -61,10 +63,10 @@ public class QuestionService {
 
     @Transactional
     public CommonResult deleteQuestion(long id){
-        List<Answer> answers=answerService.getAnswerByQuestionId(id);
+        List<Answer> answers=answerMapper.getByQuesId(id);
         if (answers!=null&&answers.size()>0){
             for (Answer answer:answers){
-                answerService.deleteAnswer(answer.getId());
+                answerMapper.delete(answer.getId());
             }
         }
         questionMapper.delete(id);
@@ -75,8 +77,6 @@ public class QuestionService {
     public void updateQuestion(Question question){
         questionMapper.update(question);
     }
-
-
 
     public CommonResult getQuestionListByPage(int page,int rows){
         PageHelper.startPage(page,rows);

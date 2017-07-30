@@ -1,16 +1,12 @@
 package app.service;
 
+import app.Model.AnswerWithStar;
 import app.Model.CommonResult;
-import app.entity.Answer;
-import app.entity.Comment;
-import app.entity.Question;
-import app.entity.User;
-import app.mapper.AnswerMapper;
-import app.mapper.CommentMapper;
-import app.mapper.QuestionMapper;
-import app.mapper.UserMapper;
+import app.entity.*;
+import app.mapper.*;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.sun.tools.javac.comp.Todo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +14,7 @@ import org.springframework.boot.ansi.AnsiElement;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -26,9 +23,6 @@ import java.util.List;
  */
 @Service
 public class AnswerService {
-
-    // TODO: 2017/7/30 answer的star与用户的关联
-
 
     private Logger logger= LoggerFactory.getLogger(this.getClass());
 
@@ -43,6 +37,9 @@ public class AnswerService {
 
     @Autowired
     private CommentService commentService;
+
+    @Autowired
+    private StarMapper starMapper;
 
     @Transactional
     public CommonResult addNewAnswer(Long userId,Long quesId,String content,String images){
@@ -76,6 +73,7 @@ public class AnswerService {
     public CommonResult deleteAnswer(long id){
         Answer answer=answerMapper.getById(id);
         answerMapper.delete(id);
+        starMapper.deleteByAnswer(answer.getId());
         Question question=questionMapper.getById(answer.getQuesId());
         question.setAcknum(question.getAcknum()-1);
         question.setUpdated(new Date());
@@ -91,44 +89,67 @@ public class AnswerService {
     }
 
 
-    public CommonResult getAnswerListByPage(long quesId,int page,int rows){
+    public CommonResult getAnswerListByPage(long user_id,long quesId,int page,int rows){
         PageHelper.startPage(page,rows);
-        List<Answer> answers=answerMapper.getByQuesId(quesId);
-        PageInfo<Answer> pageInfo=new PageInfo<Answer>(answers);
-        CommonResult commonResult=new CommonResult(200,"ok",answers);
+        List<AnswerWithStar> list = getAnswerByQuestionId(user_id, quesId);
+        PageInfo<AnswerWithStar> pageInfo=new PageInfo<AnswerWithStar>(list);
+        CommonResult commonResult=new CommonResult(200,"ok",list);
         return commonResult;
     }
 
 
 
-    public List<Answer> getAnswerByQuestionId(long id) {
+    public List<AnswerWithStar> getAnswerByQuestionId(long user_id,long id) {
 
-        return answerMapper.getByQuesId(id);
+        List<Answer> answerList = answerMapper.getByQuesId(id);
+        List<AnswerWithStar> answerWithStarList=new ArrayList<AnswerWithStar>();
+        for (Answer answer:answerList){
+            Star star=starMapper.getOne(answer.getId(),user_id);
+            if (star!=null){
+                AnswerWithStar answerWithStar=new AnswerWithStar();
+                answerWithStar.setAnswer(answer);
+                answerWithStar.setStared(true);
+                answerWithStarList.add(answerWithStar);
+            }else {
+                AnswerWithStar answerWithStar=new AnswerWithStar();
+                answerWithStar.setAnswer(answer);
+                answerWithStar.setStared(false);
+                answerWithStarList.add(answerWithStar);
+            }
+        }
+        return answerWithStarList;
 
     }
 
     @Transactional
-    public CommonResult star(Long answerId) {
+    public CommonResult star(Long answerId,Long userId) {
 
         Answer answer=answerMapper.getById(answerId);
         answer.setStar(answer.getStar()+1);
         answer.setUpdated(new Date());
         answerMapper.update(answer);
+
+        Star star=new Star();
+        star.setUserId(userId);
+        star.setAnswerId(answerId);
+        starMapper.insert(star);
+
         return new CommonResult(200,"success",null);
 
     }
 
     @Transactional
-    public CommonResult unStar(Long answerId) {
+    public CommonResult unStar(Long user_id,Long answerId) {
         Answer answer=answerMapper.getById(answerId);
         int starNum=answer.getStar();
         if (starNum>0){
             answer.setStar(answer.getStar()-1);
             answer.setUpdated(new Date());
             answerMapper.update(answer);
+            starMapper.deleteOne(user_id,answerId);
             return new CommonResult(200,"success",null);
         }else {
-            return new CommonResult(500,"star is zero",null);
+            return new CommonResult(500,"Star is zero",null);
         }
     }
 

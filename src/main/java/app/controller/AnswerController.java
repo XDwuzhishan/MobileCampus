@@ -28,18 +28,18 @@ public class AnswerController {
     }
 
     @RequestMapping(value = "/showByPage")
-    public CommonResult showAnswersByPage(Long quesId,int page,int rows){
-        return answerService.getAnswerListByPage(quesId,page,rows);
+    public CommonResult showAnswersByPage(Long user_id,Long quesId,int page,int rows){
+        return answerService.getAnswerListByPage(user_id,quesId,page,rows);
     }
 
     @RequestMapping(value = "/star")
-    public CommonResult star(Long answerId){
-        return answerService.star(answerId);
+    public CommonResult star(Long answerId,Long userId){
+        return answerService.star(answerId,userId);
     }
 
     @RequestMapping(value = "/unstar")
-    public CommonResult unstart(Long answerId){
-        return answerService.unStar(answerId);
+    public CommonResult unstar(Long answerId,Long userId){
+        return answerService.unStar(userId,answerId);
     }
 
 
