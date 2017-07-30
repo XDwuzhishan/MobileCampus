@@ -17,6 +17,8 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import us.codecraft.webmagic.selector.Html;
@@ -46,6 +48,7 @@ public class LoginJiaoWuchuService {
 
     private static CloseableHttpClient httpClient= HttpClients.createDefault();
 
+    @Cacheable(value = "LoginInfos",keyGenerator = "keyGenerator")
     public CommonResult getAllLoginInfos(){
         List<LoginInfo> loginInfos = loginInfoMapper.getAll();
         if (loginInfos!=null&&loginInfos.size()>0){
@@ -56,7 +59,7 @@ public class LoginJiaoWuchuService {
 
     }
 
-
+    @Cacheable(value = "CourseTable",keyGenerator = "keyGenerator")
     public CommonResult getCourseTable(String username, String password) {
 
         CourseTable courseTable = courseTableMapper.getCourseByUsername(username);
@@ -80,6 +83,7 @@ public class LoginJiaoWuchuService {
 
 
     @Transactional
+    @CacheEvict(value = "LoginInfos")
     public void crawAndSaveInfo(String cookie) throws IOException {
 
         loginInfoMapper.deleteAll();
@@ -122,6 +126,7 @@ public class LoginJiaoWuchuService {
     }
 
     @Transactional
+    @CacheEvict(value = "CourseTable")
     public CourseTable crawAndSaveCourse(String cookie, String username, String password) throws IOException {
 
         HttpGet course=new HttpGet("http://yjsxt.xidian.edu.cn/eduadmin/findCaresultByStudentAction.do");

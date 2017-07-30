@@ -10,6 +10,8 @@ import app.mapper.ReplyMapper;
 import app.mapper.UserMapper;
 import com.sun.java.swing.plaf.windows.WindowsBorders;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,6 +35,7 @@ public class ReplyService {
     private CommentMapper commentMapper;
 
     @Transactional
+    @CacheEvict(value = "getComById")
     public CommonResult addNewReply(Long ownerId, Long comId, String content,Long to,String images) {
 
         User user=userMapper.getUserById(ownerId);
@@ -60,6 +63,7 @@ public class ReplyService {
 
 
     @Transactional
+    @CacheEvict(value = "getComById")
     public CommonResult deleteReply(Long id) {
 
         Reply reply=replyMapper.getReplyById(id);
@@ -73,6 +77,7 @@ public class ReplyService {
 
     }
 
+    @Cacheable(value = "getComById",keyGenerator = "keyGenerator")
     public CommonResult getByComId(Long id) {
 
         List<Reply> replies=replyMapper.getReplyByComId(id);

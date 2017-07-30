@@ -10,6 +10,8 @@ import app.mapper.CommentMapper;
 import app.mapper.ReplyMapper;
 import app.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,6 +38,7 @@ public class CommentService {
     private ReplyMapper replyMapper;
 
     @Transactional
+    @CacheEvict(value = "ComByAnswerId")
     public CommonResult addNewComment(Long answerId, String content, Long ownerId,String images) {
         Comment comment=new Comment();
         comment.setAnswer_id(answerId);
@@ -62,6 +65,7 @@ public class CommentService {
 
 
     @Transactional
+    @CacheEvict(value = "ComByAnswerId")
     public CommonResult deleteComment(Long id) {
         Comment comment=commentMapper.getComById(id);
         Answer answer=answerMapper.getById(comment.getAnswer_id());
@@ -73,6 +77,7 @@ public class CommentService {
         return new CommonResult(200,"ok",null);
     }
 
+    @Cacheable(value = "ComByAnswerId",keyGenerator = "keyGenerator")
     public CommonResult getCommentsByAnswerId(long id) {
 
         List<Comment> commentList = commentMapper.getCommentsByAnswerId(id);

@@ -11,6 +11,8 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import us.codecraft.webmagic.selector.Html;
@@ -35,6 +37,8 @@ public class DynamicNewsService {
 
     private static CloseableHttpClient httpClient= HttpClients.createDefault();
 
+
+    @Cacheable(value = "DynamicNews",keyGenerator = "keyGenerator")
     public CommonResult getAllDynamicNewsOrderByDate(){
         List<DynamicNews> allDynamicNewsOrderByDate = dynamicNewsMapper.getAllDynamicNewsOrderByDate();
         if (allDynamicNewsOrderByDate!=null&&allDynamicNewsOrderByDate.size()>0){
@@ -46,6 +50,7 @@ public class DynamicNewsService {
 
 
     @Transactional
+    @CacheEvict(value = "DynamicNews")
     public void crawAndSaveDynamicNews() {
 
         dynamicNewsMapper.deleteAll();

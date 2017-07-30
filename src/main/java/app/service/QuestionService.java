@@ -11,6 +11,8 @@ import app.mapper.UserMapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,7 +26,6 @@ import java.util.List;
 @Service
 public class QuestionService {
 
-    // TODO: 2017/7/30 更改返回的数据接口，给用户头像
 
     @Autowired
     private QuestionMapper questionMapper;
@@ -37,6 +38,7 @@ public class QuestionService {
 
 
     @Transactional
+    @CacheEvict(value = {"quesByPage","myQues"})
     public CommonResult addNewQuestion(String title, String desc, Long ownerId,String images) {
 
         User curUser=userMapper.getUserById(ownerId);
@@ -64,6 +66,7 @@ public class QuestionService {
 
 
     @Transactional
+    @CacheEvict(value = {"quesByPage","myQues"})
     public CommonResult deleteQuestion(long id){
         List<Answer> answers=answerMapper.getByQuesId(id);
         if (answers!=null&&answers.size()>0){
@@ -75,11 +78,7 @@ public class QuestionService {
         return new CommonResult(200,"删除问题成功",null);
     }
 
-    @Transactional
-    public void updateQuestion(Question question){
-        questionMapper.update(question);
-    }
-
+    @Cacheable(value = "quesByPage",keyGenerator = "keyGenerator")
     public CommonResult getQuestionListByPage(int page,int rows){
         PageHelper.startPage(page,rows);
         List<QuesAndAuthor> quesAndAuthorList=new ArrayList<QuesAndAuthor>();
@@ -96,7 +95,7 @@ public class QuestionService {
         return commonResult;
     }
 
-
+    @Cacheable(value = "myQues",keyGenerator = "keyGenerator")
     public CommonResult getMyQuestions(long ownerId) {
 
         List<Question> questions=questionMapper.getByOwnerId(ownerId);

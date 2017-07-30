@@ -12,6 +12,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ansi.AnsiElement;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -46,6 +48,7 @@ public class AnswerService {
     private CommentService commentService;
 
     @Transactional
+    @CacheEvict(value = "Answers")
     public CommonResult addNewAnswer(Long userId,Long quesId,String content,String images){
         User user=userMapper.getUserById(userId);
         Answer answer=new Answer();
@@ -74,6 +77,7 @@ public class AnswerService {
 
 
     @Transactional
+    @CacheEvict(value = "Answers")
     public CommonResult deleteAnswer(long id){
         Answer answer=answerMapper.getById(id);
         answerMapper.delete(id);
@@ -92,7 +96,7 @@ public class AnswerService {
         return new CommonResult(200,"删除答案成功",null);
     }
 
-
+    @Cacheable(value = "Answers",keyGenerator = "keyGenerator")
     public CommonResult getAnswerListByPage(long user_id,long quesId,int page,int rows){
         PageHelper.startPage(page,rows);
         List<AnswerWithStar> list = getAnswerByQuestionId(user_id, quesId);
@@ -134,6 +138,7 @@ public class AnswerService {
     }
 
     @Transactional
+    @CacheEvict(value = "Answers")
     public CommonResult star(Long answerId,Long userId) {
 
         Answer answer=answerMapper.getById(answerId);
@@ -151,6 +156,7 @@ public class AnswerService {
     }
 
     @Transactional
+    @CacheEvict(value = "Answers")
     public CommonResult unStar(Long user_id,Long answerId) {
         Answer answer=answerMapper.getById(answerId);
         int starNum=answer.getStar();

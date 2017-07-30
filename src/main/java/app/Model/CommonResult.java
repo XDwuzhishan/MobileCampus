@@ -13,6 +13,9 @@ public class CommonResult {
     private String message;
     private Object data;
 
+    public CommonResult() {
+    }
+
     public CommonResult(int status, String message, Object data) {
         this.status = status;
         this.message = message;

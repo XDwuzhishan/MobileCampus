@@ -11,6 +11,8 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import us.codecraft.webmagic.selector.Html;
@@ -36,6 +38,7 @@ public class NoticeInfomationService {
     private static CloseableHttpClient httpClient= HttpClients.createDefault();
 
     @Transactional
+    @CacheEvict(value = "NoticeInfos")
     public void crawAndSaveNoticeInfomation(){
 
         noticeInfomationMapper.deleteAll();
@@ -105,6 +108,7 @@ public class NoticeInfomationService {
     }
 
 
+    @Cacheable(value = "NoticeInfos",keyGenerator = "keyGenerator")
     public CommonResult getAllInfosOrderByDate() {
 
         List<NoticeInformation> noticeInformations=noticeInfomationMapper.getAllNoticeInfomationsOrderByDate();
