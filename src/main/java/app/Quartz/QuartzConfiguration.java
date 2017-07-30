@@ -21,7 +21,7 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 @Configuration
 public class QuartzConfiguration {
 
-
+// TODO: 2017/7/30 登录后的信息爬虫存在问题，只能第一次生效
 
     @Bean
     public JobFactory jobFactory(ApplicationContext applicationContext){
@@ -117,7 +117,7 @@ public class QuartzConfiguration {
         factoryBean.setOverwriteExistingJobs(true);
         factoryBean.setJobFactory(jobFactory);
         factoryBean.setStartupDelay(0);
-        factoryBean.setTriggers(courseCronTrigger,loginInfoCronTrigger,dynamicNewsTrigger,noticeTrigger);
+        factoryBean.setTriggers(loginInfoCronTrigger,dynamicNewsTrigger,noticeTrigger);
         return factoryBean;
     }
 

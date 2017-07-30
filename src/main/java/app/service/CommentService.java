@@ -34,10 +34,11 @@ public class CommentService {
     private ReplyMapper replyMapper;
 
     @Transactional
-    public CommonResult addNewComment(Long answerId, String content, Long ownerId) {
+    public CommonResult addNewComment(Long answerId, String content, Long ownerId,String images) {
         Comment comment=new Comment();
         comment.setAnswer_id(answerId);
         comment.setContent(content);
+        comment.setImages(images);
         Date date=new Date();
         comment.setCreated(date);
         comment.setUpdated(date);

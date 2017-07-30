@@ -33,7 +33,7 @@ public class QuestionService {
 
 
     @Transactional
-    public CommonResult addNewQuestion(String title, String desc, Long ownerId) {
+    public CommonResult addNewQuestion(String title, String desc, Long ownerId,String images) {
 
         User curUser=userMapper.getUserById(ownerId);
 
@@ -45,6 +45,7 @@ public class QuestionService {
         Date date=new Date();
         question.setCreated(date);
         question.setUpdated(date);
+        question.setImages(images);
         if(curUser.getNick()==null){
             question.setOwnername(curUser.getUsername());
         }else {

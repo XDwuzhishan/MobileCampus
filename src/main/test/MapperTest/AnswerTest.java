@@ -20,7 +20,7 @@ public class AnswerTest {
 
     @Test
     public void insert(){
-        answerService.addNewAnswer(4l,3l,"我的回答");
+        answerService.addNewAnswer(4l,3l,"我的回答",null);
     }
 
 }

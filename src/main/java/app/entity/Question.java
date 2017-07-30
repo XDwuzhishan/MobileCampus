@@ -16,6 +16,15 @@ public class Question {
     private Long ownerId;
     private int acknum;
     private String ownername;
+    private String images;
+
+    public String getImages() {
+        return images;
+    }
+
+    public void setImages(String images) {
+        this.images = images;
+    }
 
     public String getOwnername() {
         return ownername;

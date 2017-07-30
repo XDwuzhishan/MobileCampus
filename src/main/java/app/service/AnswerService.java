@@ -42,7 +42,7 @@ public class AnswerService {
     private CommentService commentService;
 
     @Transactional
-    public CommonResult addNewAnswer(Long userId,Long quesId,String content){
+    public CommonResult addNewAnswer(Long userId,Long quesId,String content,String images){
         User user=userMapper.getUserById(userId);
         Answer answer=new Answer();
         answer.setContent(content);
@@ -58,6 +58,7 @@ public class AnswerService {
         Date date=new Date();
         answer.setCreated(date);
         answer.setUpdated(date);
+        answer.setImages(images);
         answerMapper.insert(answer);
         Question question=questionMapper.getById(quesId);
         question.setAcknum(question.getAcknum()+1);

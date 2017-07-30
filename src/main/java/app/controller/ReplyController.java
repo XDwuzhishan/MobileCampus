@@ -17,8 +17,8 @@ public class ReplyController {
     private ReplyService replyService;
 
     @RequestMapping(value = "/add")
-    public CommonResult addNewReply(Long ownerId,Long answerId,String content,Long to){
-        return replyService.addNewReply(ownerId,answerId,content,to);
+    public CommonResult addNewReply(Long ownerId,Long answerId,String content,Long to,String images){
+        return replyService.addNewReply(ownerId,answerId,content,to,images);
     }
 
     @RequestMapping(value = "/delete")

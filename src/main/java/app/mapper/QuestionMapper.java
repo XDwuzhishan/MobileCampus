@@ -19,7 +19,8 @@ public interface QuestionMapper {
             @Result(property = "mydesc",column = "mydesc"),
             @Result(property = "ownerId",column = "ownerId"),
             @Result(property = "ownername",column = "ownername"),
-            @Result(property = "acknum",column = "acknum")
+            @Result(property = "acknum",column = "acknum"),
+            @Result(property = "images",column = "images")
     })
     List<Question> getAll();
 
@@ -32,7 +33,8 @@ public interface QuestionMapper {
             @Result(property = "mydesc",column = "mydesc"),
             @Result(property = "ownerId",column = "ownerId"),
             @Result(property = "ownername",column = "ownername"),
-            @Result(property = "acknum",column = "acknum")
+            @Result(property = "acknum",column = "acknum"),
+            @Result(property = "images",column = "images")
     })
     Question getById(long id);
 
@@ -40,7 +42,7 @@ public interface QuestionMapper {
     @Update("update mc_question set updated=#{updated},acknum=#{acknum} where id=#{id}")
     void update(Question question);
 
-    @Insert("insert into mc_question (title,mydesc,ownerId,acknum,ownername,created,updated) values (#{title},#{mydesc},#{ownerId},#{acknum},#{ownername},#{created},#{updated})")
+    @Insert("insert into mc_question (title,mydesc,ownerId,acknum,ownername,created,updated,images) values (#{title},#{mydesc},#{ownerId},#{acknum},#{ownername},#{created},#{updated},#{images})")
     void insert(Question question);
 
     @Delete("delete from mc_question where id=#{id}")

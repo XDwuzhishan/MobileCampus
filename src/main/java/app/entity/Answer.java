@@ -16,6 +16,15 @@ public class Answer {
     private Date updated;
     private long quesId;
     private int comNum;
+    private String images;
+
+    public String getImages() {
+        return images;
+    }
+
+    public void setImages(String images) {
+        this.images = images;
+    }
 
     public int getComNum() {
         return comNum;

@@ -18,8 +18,8 @@ public class AnswerController {
     private AnswerService answerService;
 
     @RequestMapping(value = "/add")
-    public CommonResult addNewAnswer(Long userId,Long quesId,String content){
-        return answerService.addNewAnswer(userId, quesId, content);
+    public CommonResult addNewAnswer(Long userId,Long quesId,String content,String images){
+        return answerService.addNewAnswer(userId, quesId, content,images);
     }
 
     @RequestMapping(value = "/delete")

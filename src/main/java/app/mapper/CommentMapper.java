@@ -20,7 +20,8 @@ public interface CommentMapper {
             @Result(property = "updated",column = "updated"),
             @Result(property = "ownerId",column = "ownerId"),
             @Result(property = "ownerName",column = "ownerName"),
-            @Result(property = "repNum",column = "repNum")
+            @Result(property = "repNum",column = "repNum"),
+            @Result(property = "images",column = "images")
     })
     Comment getComById(Long id);
 
@@ -33,7 +34,8 @@ public interface CommentMapper {
             @Result(property = "updated",column = "updated"),
             @Result(property = "ownerId",column = "ownerId"),
             @Result(property = "ownerName",column = "ownerName"),
-            @Result(property = "repNum",column = "repNum")
+            @Result(property = "repNum",column = "repNum"),
+            @Result(property = "images",column = "images")
     })
     List<Comment> getCommentsByAnswerId(long answer_id);
 
@@ -47,7 +49,8 @@ public interface CommentMapper {
             @Result(property = "updated",column = "updated"),
             @Result(property = "ownerId",column = "ownerId"),
             @Result(property = "ownerName",column = "ownerName"),
-            @Result(property = "repNum",column = "repNum")
+            @Result(property = "repNum",column = "repNum"),
+            @Result(property = "images",column = "images")
     })
     List<Comment> getCommentsByOwnerId(long ownerId);
 
@@ -55,8 +58,8 @@ public interface CommentMapper {
     @Update("upadte mc_comment set updated=#{updated},repNum=#{repNum}")
     void update(Comment comment);
 
-    @Insert("insert into mc_comment (answer_id,content,created,updated,ownerId,ownerName,repNum) values " +
-            "(#{answer_id},#{content},#{created},#{updated},#{ownerId},#{ownerName},#{repNum})")
+    @Insert("insert into mc_comment (answer_id,content,created,updated,ownerId,ownerName,repNum,images) values " +
+            "(#{answer_id},#{content},#{created},#{updated},#{ownerId},#{ownerName},#{repNum},#{images})")
     void insert(Comment comment);
 
     @Delete("delete from mc_comment where id=#{id}")

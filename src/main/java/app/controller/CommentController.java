@@ -18,8 +18,8 @@ public class CommentController {
 
 
     @RequestMapping(value = "/add")
-    public CommonResult addNewComment(Long answerId,String content,Long ownerId){
-        return commentService.addNewComment(answerId,content,ownerId);
+    public CommonResult addNewComment(Long answerId,String content,Long ownerId,String images){
+        return commentService.addNewComment(answerId,content,ownerId,images);
     }
 
     @RequestMapping(value = "/delete")

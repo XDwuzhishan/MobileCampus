@@ -15,6 +15,15 @@ public class Reply {
     private Long ownerId;
     private String ownerName;
     private Long to;
+    private String images;
+
+    public String getImages() {
+        return images;
+    }
+
+    public void setImages(String images) {
+        this.images = images;
+    }
 
     public Long getId() {
         return id;

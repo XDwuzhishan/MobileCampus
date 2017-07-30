@@ -18,8 +18,8 @@ public class QuestionController {
     private QuestionService questionService;
 
     @RequestMapping(value = "/add")
-    public CommonResult addNewQuestion(@RequestParam String title,@RequestParam String desc,@RequestParam Long ownerId){
-        return questionService.addNewQuestion(title,desc,ownerId);
+    public CommonResult addNewQuestion(@RequestParam String title,@RequestParam String desc,@RequestParam Long ownerId,String images){
+        return questionService.addNewQuestion(title,desc,ownerId,images);
     }
 
     @RequestMapping(value = "/delete")

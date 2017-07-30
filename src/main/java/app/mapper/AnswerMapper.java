@@ -20,7 +20,8 @@ public interface AnswerMapper {
             @Result(property = "star",column = "star"),
             @Result(property = "updated",column = "updated"),
             @Result(property = "quesId",column = "quesId"),
-            @Result(property = "comNum",column = "comNum")
+            @Result(property = "comNum",column = "comNum"),
+            @Result(property = "images",column = "images")
     })
     List<Answer> getAll();
 
@@ -34,7 +35,8 @@ public interface AnswerMapper {
             @Result(property = "star",column = "star"),
             @Result(property = "updated",column = "updated"),
             @Result(property = "quesId",column = "quesId"),
-            @Result(property = "comNum",column = "comNum")
+            @Result(property = "comNum",column = "comNum"),
+            @Result(property = "images",column = "images")
     })
     Answer getById(Long id);
 
@@ -48,13 +50,14 @@ public interface AnswerMapper {
             @Result(property = "star",column = "star"),
             @Result(property = "updated",column = "updated"),
             @Result(property = "quesId",column = "quesId"),
-            @Result(property = "comNum",column = "comNum")
+            @Result(property = "comNum",column = "comNum"),
+            @Result(property = "images",column = "images")
     })
     List<Answer> getByQuesId(long quesId);
 
 
-    @Insert("insert into mc_answer (id,content,created,ownerId,ownername,star,updated,quesId,comNum) values (#{id},#{content},#{created},#{ownerId}," +
-            "#{ownername},#{star},#{updated},#{quesId},#{comNum})")
+    @Insert("insert into mc_answer (id,content,created,ownerId,ownername,star,updated,quesId,comNum,images) values (#{id},#{content},#{created},#{ownerId}," +
+            "#{ownername},#{star},#{updated},#{quesId},#{comNum},#{images})")
     void insert(Answer answer);
 
     @Update("update mc_answer set comNum=#{comNum},star=#{star},updated=#{updated} where id=#{id}")

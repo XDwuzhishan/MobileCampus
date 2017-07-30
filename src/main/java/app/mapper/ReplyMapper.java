@@ -20,7 +20,8 @@ public interface ReplyMapper {
             @Result(property = "updated",column = "updated"),
             @Result(property = "ownerId",column = "ownerId"),
             @Result(property = "ownerName",column = "ownerName"),
-            @Result(property = "to",column = "to")
+            @Result(property = "to",column = "to"),
+            @Result(property = "images",column = "images")
     })
     List<Reply> getAll();
 
@@ -33,12 +34,13 @@ public interface ReplyMapper {
             @Result(property = "updated",column = "updated"),
             @Result(property = "ownerId",column = "ownerId"),
             @Result(property = "ownerName",column = "ownerName"),
-            @Result(property = "to",column = "to")
+            @Result(property = "to",column = "to"),
+            @Result(property = "images",column = "images")
     })
     Reply getReplyById(Long id);
 
-    @Insert("insert into mc_reply (id,comId,content,created,updated,ownerId,ownerName,to) values " +
-            "(#{id},#{comId},#{content},#{created},#{updated},#{ownerId},#{ownerName},#{to})")
+    @Insert("insert into mc_reply (id,comId,content,created,updated,ownerId,ownerName,to,images) values " +
+            "(#{id},#{comId},#{content},#{created},#{updated},#{ownerId},#{ownerName},#{to},#{images})")
     void insert(Reply reply);
 
     @Update("update mc_reply set comId=#{comId},content=#{content},created=#{created},updated=#{updated},ownerId=#{ownerId}," +

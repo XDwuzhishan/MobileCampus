@@ -22,7 +22,7 @@ public class QuestionTest {
 
     @Test
     public void insert(){
-        questionService.addNewQuestion("一个小问题","没什么",4l);
+        questionService.addNewQuestion("一个小问题","没什么",4l,null);
     }
 
     @Test

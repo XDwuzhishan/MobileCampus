@@ -30,7 +30,7 @@ public class ReplyService {
     private CommentMapper commentMapper;
 
     @Transactional
-    public CommonResult addNewReply(Long ownerId, Long comId, String content,Long to) {
+    public CommonResult addNewReply(Long ownerId, Long comId, String content,Long to,String images) {
 
         User user=userMapper.getUserById(ownerId);
         Comment comment=commentMapper.getComById(comId);
@@ -38,6 +38,7 @@ public class ReplyService {
         reply.setComId(comId);
         reply.setContent(content);
         reply.setOwnerId(ownerId);
+        reply.setImages(images);
         if(user.getNick()==null){
             reply.setOwnerName(user.getUsername());
         }else {
