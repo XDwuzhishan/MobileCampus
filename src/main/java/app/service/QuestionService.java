@@ -1,6 +1,7 @@
 package app.service;
 
 import app.Model.CommonResult;
+import app.Model.QuesAndAuthor;
 import app.entity.Answer;
 import app.entity.Question;
 import app.entity.User;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -80,9 +82,17 @@ public class QuestionService {
 
     public CommonResult getQuestionListByPage(int page,int rows){
         PageHelper.startPage(page,rows);
+        List<QuesAndAuthor> quesAndAuthorList=new ArrayList<QuesAndAuthor>();
         List<Question> questions=questionMapper.getAll();
+        for (Question question:questions){
+            QuesAndAuthor quesAndAuthor=new QuesAndAuthor();
+            User user=userMapper.getUserById(question.getOwnerId());
+            quesAndAuthor.setQuestion(question);
+            quesAndAuthor.setUser(user);
+            quesAndAuthorList.add(quesAndAuthor);
+        }
         PageInfo<Question> pageInfo=new PageInfo<Question>(questions);
-        CommonResult commonResult=new CommonResult(200,"ok",questions);
+        CommonResult commonResult=new CommonResult(200,"ok",quesAndAuthorList);
         return commonResult;
     }
 

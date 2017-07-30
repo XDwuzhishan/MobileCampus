@@ -26,5 +26,10 @@ public class ReplyController {
         return replyService.deleteReply(id);
     }
 
+    @RequestMapping(value = "/getByComId")
+    public CommonResult getByComId(Long id){
+        return replyService.getByComId(id);
+    }
+
 
 }

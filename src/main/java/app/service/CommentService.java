@@ -1,5 +1,6 @@
 package app.service;
 
+import app.Model.CommentAndAuthor;
 import app.Model.CommonResult;
 import app.entity.Answer;
 import app.entity.Comment;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -71,9 +73,18 @@ public class CommentService {
         return new CommonResult(200,"ok",null);
     }
 
-    public List<Comment> getCommentsByAnswerId(long id) {
+    public CommonResult getCommentsByAnswerId(long id) {
 
-        return commentMapper.getCommentsByAnswerId(id);
+        List<Comment> commentList = commentMapper.getCommentsByAnswerId(id);
+        List<CommentAndAuthor> commentAndAuthors=new ArrayList<CommentAndAuthor>();
+        for (Comment comment:commentList){
+            CommentAndAuthor commentAndAuthor=new CommentAndAuthor();
+            User user=userMapper.getUserById(comment.getOwnerId());
+            commentAndAuthor.setComment(comment);
+            commentAndAuthor.setUser(user);
+            commentAndAuthors.add(commentAndAuthor);
+        }
+        return new CommonResult(200,"success",commentAndAuthors);
 
     }
 }

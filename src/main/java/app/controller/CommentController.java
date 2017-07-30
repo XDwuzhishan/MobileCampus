@@ -1,6 +1,7 @@
 package app.controller;
 
 import app.Model.CommonResult;
+import app.entity.Comment;
 import app.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +28,11 @@ public class CommentController {
         return commentService.deleteComment(id);
     }
 
+
+    @RequestMapping(value = "/getByAnswerId")
+    public CommonResult getCommentsByAnswerId(Long answerId){
+        return commentService.getCommentsByAnswerId(answerId);
+    }
 
 
 }

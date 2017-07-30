@@ -53,5 +53,17 @@ public interface ReplyMapper {
     @Delete("delete from mc_reply where comId=#{comId}")
     void deleteByComId(Long comId);
 
-
+    @Select("select * from mc_reply where comId=#{id}")
+    @Results({
+            @Result(property = "id",column = "id"),
+            @Result(property = "comId",column = "comId"),
+            @Result(property = "content",column = "content"),
+            @Result(property = "created",column = "created"),
+            @Result(property = "updated",column = "updated"),
+            @Result(property = "ownerId",column = "ownerId"),
+            @Result(property = "ownerName",column = "ownerName"),
+            @Result(property = "to",column = "to"),
+            @Result(property = "images",column = "images")
+    })
+    List<Reply> getReplyByComId(Long id);
 }

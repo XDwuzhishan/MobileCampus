@@ -1,6 +1,7 @@
 package app.service;
 
 import app.Model.CommonResult;
+import app.Model.ReplyAndAuthor;
 import app.entity.Comment;
 import app.entity.Reply;
 import app.entity.User;
@@ -12,7 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by xdcao on 2017/6/16.
@@ -67,6 +70,21 @@ public class ReplyService {
         replyMapper.delete(id);
 
         return new CommonResult(200,"ok",null);
+
+    }
+
+    public CommonResult getByComId(Long id) {
+
+        List<Reply> replies=replyMapper.getReplyByComId(id);
+        List<ReplyAndAuthor> replyAndAuthors=new ArrayList<ReplyAndAuthor>();
+        for (Reply reply:replies){
+            User user=userMapper.getUserById(reply.getOwnerId());
+            ReplyAndAuthor replyAndAuthor=new ReplyAndAuthor();
+            replyAndAuthor.setReply(reply);
+            replyAndAuthor.setUser(user);
+            replyAndAuthors.add(replyAndAuthor);
+        }
+        return new CommonResult(200,"success",replyAndAuthors);
 
     }
 }

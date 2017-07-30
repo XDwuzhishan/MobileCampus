@@ -1,5 +1,6 @@
 package app.service;
 
+import app.Model.AnswerAndAuthor;
 import app.Model.AnswerWithStar;
 import app.Model.CommonResult;
 import app.entity.*;
@@ -92,8 +93,16 @@ public class AnswerService {
     public CommonResult getAnswerListByPage(long user_id,long quesId,int page,int rows){
         PageHelper.startPage(page,rows);
         List<AnswerWithStar> list = getAnswerByQuestionId(user_id, quesId);
+        List<AnswerAndAuthor> answerAndAuthors=new ArrayList<AnswerAndAuthor>();
+        for (AnswerWithStar answerWithStar:list){
+            User user=userMapper.getUserById(answerWithStar.getAnswer().getOwnerId());
+            AnswerAndAuthor answerAndAuthor=new AnswerAndAuthor();
+            answerAndAuthor.setAnswerWithStar(answerWithStar);
+            answerAndAuthor.setUser(user);
+            answerAndAuthors.add(answerAndAuthor);
+        }
         PageInfo<AnswerWithStar> pageInfo=new PageInfo<AnswerWithStar>(list);
-        CommonResult commonResult=new CommonResult(200,"ok",list);
+        CommonResult commonResult=new CommonResult(200,"ok",answerAndAuthors);
         return commonResult;
     }
 
