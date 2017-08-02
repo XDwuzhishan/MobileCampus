@@ -21,7 +21,8 @@ public interface UserMapper {
             @Result(property = "sex",column = "sex"),
             @Result(property = "age",column = "age"),
             @Result(property = "school",column = "school"),
-            @Result(property = "nick",column = "nick")
+            @Result(property = "nick",column = "nick"),
+            @Result(property = "picUrl",column = "picUrl")
     })
     List<User> getAllUsers();
 
@@ -35,7 +36,8 @@ public interface UserMapper {
             @Result(property = "sex",column = "sex"),
             @Result(property = "age",column = "age"),
             @Result(property = "school",column = "school"),
-            @Result(property = "nick",column = "nick")
+            @Result(property = "nick",column = "nick"),
+            @Result(property = "picUrl",column = "picUrl")
     })
     User getUserById(Long id);
 
@@ -49,12 +51,13 @@ public interface UserMapper {
             @Result(property = "sex",column = "sex"),
             @Result(property = "age",column = "age"),
             @Result(property = "school",column = "school"),
-            @Result(property = "nick",column = "nick")
+            @Result(property = "nick",column = "nick"),
+            @Result(property = "picUrl",column = "picUrl")
     })
     User getUserByName(String username);
 
-    @Insert("insert into mc_user (username,password,created,updated,sex,age,school,nick) " +
-            "values (#{username},#{password},#{created},#{updated},#{sex},#{age},#{school},#{nick})")
+    @Insert("insert into mc_user (username,password,created,updated,sex,age,school,nick,picUrl) " +
+            "values (#{username},#{password},#{created},#{updated},#{sex},#{age},#{school},#{nick},#{picUrl})")
     void insert(User user);
 
     @Update("update mc_user set username=#{username},password=#{password},created=#{created},updated=#{updated},sex=#{sex},age=#{age}," +
