@@ -1,6 +1,7 @@
 package app.controller;
 
 import app.Model.CommonResult;
+import app.manager.DataGridResult;
 import app.service.UserService;
 
 
@@ -45,6 +46,11 @@ public class UserController {
         CommonResult result = userService.regist(username, password, picUrl);
         logger.info("register: "+username+" ,result: "+result.getMessage());
         return result;
+    }
+
+    @RequestMapping(value = "list")
+    public DataGridResult listUsers(@RequestParam Integer page, @RequestParam Integer rows){
+        return userService.getUsersByPage(page,rows);
     }
 
 

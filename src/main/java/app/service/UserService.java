@@ -1,13 +1,21 @@
 package app.service;
 
+import app.Model.AnswerAndAuthor;
+import app.Model.AnswerWithStar;
 import app.Model.CommonResult;
 import app.entity.User;
+import app.manager.DataGridResult;
 import app.mapper.UserMapper;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.jws.soap.SOAPBinding;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by xdcao on 2017/6/6.
@@ -60,5 +68,23 @@ public class UserService {
 
     }
 
+
+    public DataGridResult getUsersByPage(Integer page, Integer rows) {
+
+        PageHelper.startPage(page,rows);
+        List<User> list = userMapper.getAllUsers();
+        PageInfo<User> pageInfo=new PageInfo<User>(list);
+        DataGridResult dataGridResult=new DataGridResult();
+        dataGridResult.setRows(list);
+        dataGridResult.setTotal(pageInfo.getTotal());
+        return dataGridResult;
+
+    }
+
+    // TODO: 2017/8/20 用户管理部分代码
+    @Transactional
+    public void deleteUserById(Long id){
+        userMapper.delete(id);
+    }
 
 }
