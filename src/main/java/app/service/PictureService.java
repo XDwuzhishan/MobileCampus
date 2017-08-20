@@ -24,11 +24,14 @@ public class PictureService {
 
     private org.slf4j.Logger logger= LoggerFactory.getLogger(this.getClass());
 
-//    private static String filepath="D://upload";
-//    private static String baseUrl="http://localhost/";
+    //调试环境
+    private static String filepath="D://mobileTmp";
+    private static String baseUrl="http://localhost/";
 
-    private static String filepath="/data/wwwroot/default";
-    private static String baseUrl="http://101.200.59.58/";
+
+    //生产环境
+//    private static String filepath="/data/wwwroot/default";
+//    private static String baseUrl="http://101.200.59.58/";
 
     public PictureResult uploadPicture(MultipartFile pic) {
 
@@ -65,6 +68,7 @@ public class PictureService {
 //        String ip=addr.getHostAddress().toString();//获得本机IP
 
         pictureResult.setUrl(baseUrl+picName);
+        logger.info("picUrl:  "+baseUrl+picName);
         return pictureResult;
 
 

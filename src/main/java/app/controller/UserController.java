@@ -1,6 +1,7 @@
 package app.controller;
 
 import app.Model.CommonResult;
+import app.entity.User;
 import app.manager.DataGridResult;
 import app.service.UserService;
 
@@ -9,10 +10,13 @@ import ch.qos.logback.classic.Logger;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * Created by xdcao on 2017/6/6.
@@ -48,9 +52,35 @@ public class UserController {
         return result;
     }
 
-    @RequestMapping(value = "list")
+    @RequestMapping(value = "/list")
     public DataGridResult listUsers(@RequestParam Integer page, @RequestParam Integer rows){
+        logger.info("listUsers");
         return userService.getUsersByPage(page,rows);
+    }
+
+    @RequestMapping(value = "/delete")
+    public CommonResult deleteUsers(@RequestParam List<Long> ids){
+
+        return userService.deleteUsers(ids);
+    }
+
+    @RequestMapping(value = "/save")
+    public CommonResult saveUser(String username,String password,String school,String sex,String nick,String image){
+        User user=new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setSchool(school);
+        if (sex.equalsIgnoreCase("男")){
+            user.setSex(true);
+        }else if(sex.equalsIgnoreCase("女")){
+            user.setSex(false);
+        }
+        user.setNick(nick);
+        user.setPicUrl(image);
+        CommonResult commonResult=userService.managerAddUser(user);
+        logger.info("saveUser: "+user.getUsername()+" ,result: "+commonResult.getMessage());
+        return commonResult;
+
     }
 
 

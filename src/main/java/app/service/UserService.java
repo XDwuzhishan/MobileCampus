@@ -81,10 +81,27 @@ public class UserService {
 
     }
 
-    // TODO: 2017/8/20 用户管理部分代码
+    // TODO: 2017/8/20 编辑用户
+
     @Transactional
-    public void deleteUserById(Long id){
-        userMapper.delete(id);
+    public CommonResult deleteUsers(List<Long> ids) {
+
+        for (Long id:ids){
+            userMapper.delete(id);
+        }
+
+        return new CommonResult(200,"ok",null);
+
     }
 
+
+    @Transactional
+    public CommonResult managerAddUser(User user) {
+
+        Date date=new Date();
+        user.setCreated(date);
+        user.setUpdated(date);
+        userMapper.insert(user);
+        return new CommonResult(200,"ok",null);
+    }
 }
